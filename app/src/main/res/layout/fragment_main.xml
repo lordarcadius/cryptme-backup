@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            app:tabTextColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encrypt"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrypt"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:id="@+id/inputFilePathLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.divyanshu.cryptit.FileSelectButton
+                android:id="@+id/selectInputFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:minimized="false"
+                app:output_button="false" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/inputFilePathTextView"
+                    style="@style/FilePathTextView" />
+            </HorizontalScrollView>
+        </LinearLayout>
+        <View
+            android:id="@+id/inputFilePathUnderlineView"
+            style="@style/FilePathUnderlineView"/>
+        <CheckBox
+            android:id="@+id/deleteInputFileCheckbox"
+            android:text="@string/delete_input_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/outputFilePathLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <com.divyanshu.cryptit.FileSelectButton
+                android:id="@+id/selectOutputFileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:minimized="false"
+                app:output_button="true" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/outputFilePathTextView"
+                    style="@style/FilePathTextView" />
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/outputFilePathUnderlineView"
+            style="@style/FilePathUnderlineView"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            style="@style/PasswordEditText"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/password" />
+
+        <EditText
+            android:id="@+id/confirmPasswordEditText"
+            style="@style/PasswordEditText"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/confirm_password" />
+
+        <Button
+            android:id="@+id/fp_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:text="Use Fingerprint instead"
+            />
+
+        <CheckBox
+            android:id="@+id/showPasswordCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/show_password" />
+
+        <LinearLayout
+            android:id="@+id/progressDisplayLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/progressDisplayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressDisplayProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false" />
+
+            <LinearLayout
+                android:id="@+id/progressDisplayCancelButtonLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:tint="@android:color/darker_gray"
+                    app:srcCompat="@drawable/ic_cancel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="3dp"
+                    android:paddingStart="3dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
