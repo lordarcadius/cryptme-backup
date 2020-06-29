@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cht/Desktop/Android/Crypt-IT/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "D:\\ProStuff\\AndroidStudioProjects\\Crypt-It\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/home/cht/.gradle/caches/transforms-2/files-2.1/1edfdc429d77b13e1a88be981b2b9af9/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "C:\\Users\\Vipul Jha\\.gradle\\caches\\transforms-2\\files-2.1\\ac578dd963fa0e8b00d9521c2822ad2e\\appcompat-1.0.2\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/cht/.gradle/caches/transforms-2/files-2.1/16bae3e04ed759a4522ebb60ec838399/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "C:\\Users\\Vipul Jha\\.gradle\\caches\\transforms-2\\files-2.1\\21dadf335ac8035a991bc5e1b16c722a\\core-1.0.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

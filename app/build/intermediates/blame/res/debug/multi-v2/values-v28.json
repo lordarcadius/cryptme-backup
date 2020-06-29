@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/cht/Desktop/Android/Crypt-IT/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "D:\\ProStuff\\AndroidStudioProjects\\Crypt-It\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "/home/cht/.gradle/caches/transforms-2/files-2.1/1edfdc429d77b13e1a88be981b2b9af9/res/values-v28/values-v28.xml",
+                    "source": "C:\\Users\\Vipul Jha\\.gradle\\caches\\transforms-2\\files-2.1\\ac578dd963fa0e8b00d9521c2822ad2e\\appcompat-1.0.2\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
