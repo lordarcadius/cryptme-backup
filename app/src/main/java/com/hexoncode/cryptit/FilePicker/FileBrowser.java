@@ -1,10 +1,10 @@
-package com.divyanshu.cryptit.FilePicker;
+package com.hexoncode.cryptit.FilePicker;
 
 import android.content.Context;
 import android.os.Environment;
 import androidx.documentfile.provider.DocumentFile;
 
-import com.divyanshu.cryptit.StorageAccessFrameworkHelper;
+import com.hexoncode.cryptit.StorageAccessFrameworkHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;

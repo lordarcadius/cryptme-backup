@@ -1,4 +1,4 @@
-package com.divyanshu.cryptit;
+package com.hexoncode.cryptit;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,12 +9,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.documentfile.provider.DocumentFile;
 import android.text.InputType;
 import android.text.SpannableString;

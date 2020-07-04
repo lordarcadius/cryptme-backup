@@ -1,8 +1,7 @@
-package com.divyanshu.cryptit;
+package com.hexoncode.cryptit;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.widget.TextView;

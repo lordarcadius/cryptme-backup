@@ -1,4 +1,4 @@
-package com.divyanshu.cryptit;
+package com.hexoncode.cryptit;
 
 import android.net.Uri;
 import android.os.Bundle;

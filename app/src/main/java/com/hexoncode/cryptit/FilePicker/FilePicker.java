@@ -1,4 +1,4 @@
-package com.divyanshu.cryptit.FilePicker;
+package com.hexoncode.cryptit.FilePicker;
 
 import android.graphics.Color;
 import android.net.Uri;
@@ -23,11 +23,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.divyanshu.cryptit.GlobalDocumentFileStateHolder;
-import com.divyanshu.cryptit.MainActivity;
-import com.divyanshu.cryptit.R;
-import com.divyanshu.cryptit.SettingsHelper;
-import com.divyanshu.cryptit.StorageAccessFrameworkHelper;
+import com.hexoncode.cryptit.GlobalDocumentFileStateHolder;
+import com.hexoncode.cryptit.MainActivity;
+import com.hexoncode.cryptit.R;
+import com.hexoncode.cryptit.SettingsHelper;
+import com.hexoncode.cryptit.StorageAccessFrameworkHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;

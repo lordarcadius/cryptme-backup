@@ -1,4 +1,4 @@
-package com.divyanshu.cryptit;
+package com.hexoncode.cryptit;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
