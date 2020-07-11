@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232637"
+    tools:context=".DecryptFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/uploadAFile">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/upload_file_bg"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_uploadafile_lock"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:fontFamily="@font/bold"
+                android:textStyle="bold"
+                android:text="@string/upload_a_file"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadAFile"
+        android:orientation="horizontal"
+        android:id="@+id/LLDeleteAfterUpload"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteInputFileCheckbox"
+            android:buttonTint="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/delete_input_file_after_uploading"
+            android:fontFamily="@font/medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLPasswordAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LLDeleteAfterUpload"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/enterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:textSize="16sp"
+            android:cursorVisible="true"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:fontFamily="@font/regular"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textCursorDrawable="@null"
+            android:hint="@string/enter_password"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/decryptButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="@string/decrypt"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                android:fontFamily="@font/medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fingerprint"
+        android:visibility="visible"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/fingerprint"/>
+
+</RelativeLayout>

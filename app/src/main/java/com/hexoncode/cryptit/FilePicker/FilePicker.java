@@ -183,7 +183,7 @@ public abstract class FilePicker extends Fragment {
 
     /**
      * called by the MainActivity when the back button is pressed, goes up one directory
-     * if parent directory does not exist: regular back button behavior
+     * if parent directory does not exist: bold_max back button behavior
      */
     public void onBackPressed() {
         if (!fileBrowser.goToParentDirectory()) {
