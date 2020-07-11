@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="30dp">
 
         <TextView
             android:id="@+id/aescryptVersionTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/aescrypt_version" />
+            android:text="@string/aescrypt_version"
+            android:textColor="#fff"
+            android:fontFamily="@font/semi_bold"
+            android:textSize="16sp"/>
 
         <RadioGroup
             android:id="@+id/aescryptVersionRadioGroup"
@@ -29,24 +33,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingEnd="16dp"
+                android:buttonTint="@color/colorAccent"
                 android:layout_marginBottom="8dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
                 android:text="@string/version_1_radio_button_text"/>
 
             <RadioButton
                 android:id="@+id/version2RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
                 android:text="@string/version_2_radio_button_text" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/filePickerDisplayTitleTextView"
+            android:id="@+id/defaultAuthTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/file_picker_display" />
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:fontFamily="@font/semi_bold"
+            android:text="Default Authentication Method" />
 
         <RadioGroup
-            android:id="@+id/filePickerDisplayRadioGroup"
+            android:id="@+id/defaultAuthRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -55,24 +70,36 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/iconDisplayRadioButton"
+                android:id="@+id/fingerprintRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingEnd="16dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
                 android:layout_marginBottom="8dp"
-                android:text="@string/icons" />
+                android:text="Fingerprint" />
 
             <RadioButton
-                android:id="@+id/listDisplayRadioButton"
+                android:id="@+id/passwordRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/list" />
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
+                android:text="Password" />
+
         </RadioGroup>
 
         <TextView
             android:id="@+id/themeTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:fontFamily="@font/semi_bold"
+            android:textSize="16sp"
             android:text="@string/theme" />
 
         <RadioGroup
@@ -90,44 +117,83 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:paddingEnd="16dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
                 android:text="@string/light" />
 
             <RadioButton
                 android:id="@+id/darkThemeRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
                 android:text="@string/dark" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/outputTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:fontFamily="@font/semi_bold"
+            android:textSize="16sp"
+            android:text="@string/theme" />
+
+        <RadioGroup
+            android:id="@+id/outputRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/sameRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingEnd="16dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
+                android:text="@string/same_as_input" />
+
+            <RadioButton
+                android:id="@+id/askRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:fontFamily="@font/regular"
+                android:buttonTint="@color/colorAccent"
+                android:text="@string/ask_everytime" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/sdCardTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:fontFamily="@font/semi_bold"
             android:text="@string/sdcard_location" />
 
-        <LinearLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:fontFamily="@font/extra_light"
+            android:textColorHint="#fff"
+            android:padding="15dp"
+            android:hint="/ > storage > emulated > 0 > CryptIT"/>
 
-            <TextView
-                android:id="@+id/sdCardTextView"
-                style="@android:style/Widget.EditText"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingStart="15dp"
-                android:textSize="15sp" />
-
-            <Button
-                android:id="@+id/sdCardEditButton"
-                style="@style/DialogButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/edit" />
-
-        </LinearLayout>
     </LinearLayout>
 </ScrollView>

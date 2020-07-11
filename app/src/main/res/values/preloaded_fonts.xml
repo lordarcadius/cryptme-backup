@@ -2,5 +2,14 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/open_sans</item>
+        <item>@font/extra_light</item>
+        <item>@font/light</item>
+        <item>@font/thin</item>
+        <item>@font/regular</item>
+        <item>@font/medium</item>
+        <item>@font/bold</item>
+        <item>@font/semi_bold</item>
+        <item>@font/extra_bold</item>
+        <item>@font/bold_max</item>
     </array>
 </resources>

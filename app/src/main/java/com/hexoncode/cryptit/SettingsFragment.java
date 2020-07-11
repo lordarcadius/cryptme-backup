@@ -18,8 +18,8 @@ import android.widget.TextView;
  */
 public class SettingsFragment extends Fragment {
 
-    private TextView sdCardTextView;
-    private Button sdCardEditButton;
+//    private TextView sdCardTextView;
+//    private Button sdCardEditButton;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,14 +40,14 @@ public class SettingsFragment extends Fragment {
         }
         aescryptVersionRadioGroup.setOnCheckedChangeListener(aescryptVersionRadioGroupOnCheckedChangedListener);
 
-        RadioGroup filePickerDisplayRadioGroup = (RadioGroup) view.findViewById(R.id.filePickerDisplayRadioGroup);
-        int currentFilePickerDisplayType = SettingsHelper.getFilePickerType(getContext());
-        if (currentFilePickerDisplayType == SettingsHelper.FILE_ICON_VIEWER) {
-            filePickerDisplayRadioGroup.check(R.id.iconDisplayRadioButton);
-        } else if (currentFilePickerDisplayType == SettingsHelper.FILE_LIST_VIEWER) {
-            filePickerDisplayRadioGroup.check(R.id.listDisplayRadioButton);
+        RadioGroup defaultAuthRadioGroup = (RadioGroup) view.findViewById(R.id.defaultAuthRadioGroup);
+        int currentdefaultAuthType = SettingsHelper.getFilePickerType(getContext());
+        if (currentdefaultAuthType == SettingsHelper.FILE_ICON_VIEWER) {
+            defaultAuthRadioGroup.check(R.id.fingerprintRadioButton);
+        } else if (currentdefaultAuthType == SettingsHelper.FILE_LIST_VIEWER) {
+            defaultAuthRadioGroup.check(R.id.passwordRadioButton);
         }
-        filePickerDisplayRadioGroup.setOnCheckedChangeListener(filePickerDisplayRadioGroupOnCheckedChangedListener);
+        defaultAuthRadioGroup.setOnCheckedChangeListener(defaultAuthRadioGroupOnCheckedChangedListener);
 
         RadioGroup themeRadioGroup = (RadioGroup) view.findViewById(R.id.themeRadioGroup);
         boolean currentUseDarkThemeSetting = SettingsHelper.getUseDarkTeme(getContext());
@@ -59,28 +59,28 @@ public class SettingsFragment extends Fragment {
         themeRadioGroup.setOnCheckedChangeListener(themeRadioGroupOnCheckedChangedListener);
 
 
-        sdCardTextView = (TextView) view.findViewById(R.id.sdCardTextView);
-        sdCardEditButton = (Button) view.findViewById(R.id.sdCardEditButton);
-        if (!StorageAccessFrameworkHelper.canSupportSDCardOnAndroidVersion()) {
+        /*sdCardTextView = (TextView) view.findViewById(R.id.sdCardTextView);
+        sdCardEditButton = (Button) view.findViewById(R.id.sdCardEditButton);*/
+       /* if (!StorageAccessFrameworkHelper.canSupportSDCardOnAndroidVersion()) {
             view.findViewById(R.id.sdCardTitleTextView).setVisibility(View.GONE);
             sdCardTextView.setVisibility(View.GONE);
             sdCardEditButton.setVisibility(View.GONE);
         } else {
             sdCardEditButton.setOnClickListener(sdCardEditButtonOnClickListener);
-        }
+        }*/
 
         /*update ui to match theme preferences*/
         if (SettingsHelper.getUseDarkTeme(getContext())) {
             int textColor = ((MainActivity)getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary);
             ((RadioButton) aescryptVersionRadioGroup.findViewById(R.id.version1RadioButton)).setTextColor(textColor);
             ((RadioButton) aescryptVersionRadioGroup.findViewById(R.id.version2RadioButton)).setTextColor(textColor);
-            ((RadioButton) filePickerDisplayRadioGroup.findViewById(R.id.iconDisplayRadioButton)).setTextColor(textColor);
-            ((RadioButton) filePickerDisplayRadioGroup.findViewById(R.id.listDisplayRadioButton)).setTextColor(textColor);
+            ((RadioButton) defaultAuthRadioGroup.findViewById(R.id.fingerprintRadioButton)).setTextColor(textColor);
+            ((RadioButton) defaultAuthRadioGroup.findViewById(R.id.passwordRadioButton)).setTextColor(textColor);
             ((RadioButton) themeRadioGroup.findViewById(R.id.darkThemeRadioButton)).setTextColor(textColor);
             ((RadioButton) themeRadioGroup.findViewById(R.id.lightThemeRadioButton)).setTextColor(textColor);
 
             ((TextView) view.findViewById(R.id.aescryptVersionTitleTextView)).setTextColor(textColor);
-            ((TextView) view.findViewById(R.id.filePickerDisplayTitleTextView)).setTextColor(textColor);
+            ((TextView) view.findViewById(R.id.defaultAuthTitleTextView)).setTextColor(textColor);
             ((TextView) view.findViewById(R.id.themeTitleTextView)).setTextColor(textColor);
             ((TextView) view.findViewById(R.id.sdCardTitleTextView)).setTextColor(textColor);
         }
@@ -90,7 +90,7 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (StorageAccessFrameworkHelper.canSupportSDCardOnAndroidVersion()) {
+        /*if (StorageAccessFrameworkHelper.canSupportSDCardOnAndroidVersion()) {
             String sdCardUri = SettingsHelper.getSdcardRoot(getContext());
             if (sdCardUri != null) {
                 String sdCardName = DocumentFile.fromTreeUri(getContext(), Uri.parse(sdCardUri)).getName();
@@ -104,7 +104,7 @@ public class SettingsFragment extends Fragment {
                 sdCardTextView.setText(R.string.not_set);
                 sdCardEditButton.setText(R.string.set);
             }
-        }
+        }*/
     }
 
     private RadioGroup.OnCheckedChangeListener aescryptVersionRadioGroupOnCheckedChangedListener = new RadioGroup.OnCheckedChangeListener() {
@@ -121,15 +121,15 @@ public class SettingsFragment extends Fragment {
         }
     };
 
-    private RadioGroup.OnCheckedChangeListener filePickerDisplayRadioGroupOnCheckedChangedListener = new RadioGroup.OnCheckedChangeListener() {
+    private RadioGroup.OnCheckedChangeListener defaultAuthRadioGroupOnCheckedChangedListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             switch (checkedId) {
-                case R.id.iconDisplayRadioButton:
-                    SettingsHelper.setFilePickerType(getContext(), SettingsHelper.FILE_ICON_VIEWER);
+                case R.id.fingerprintRadioButton:
+
                     break;
-                case R.id.listDisplayRadioButton:
-                    SettingsHelper.setFilePickerType(getContext(), SettingsHelper.FILE_LIST_VIEWER);
+                case R.id.passwordEditText:
+
                     break;
             }
         }

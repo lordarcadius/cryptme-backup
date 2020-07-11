@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="193.571" height="136.234" viewBox="0 0 193.571 136.234">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#16ae58"/>
+      <stop offset="1" stop-color="#29c5cb"/>
+    </linearGradient>
+    <filter id="Union_2" x="5" y="5" width="188.571" height="131.234" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Logo" style="isolation: isolate">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Union_2)">
+      <path id="Union_2-2" data-name="Union 2" d="M110.122,113.634,91.786,95.3,73.451,113.632A43.009,43.009,0,1,1,64.5,45.9V29.756a2.947,2.947,0,0,1,2.212-2.281h3.283V15.617C69.991,7.817,77.505,0,85.3,0H98.326c7.8,0,15.625,7.817,15.625,15.617V27.475h2.967c.933,0,2.528,1.459,2.528,2.281V45.688a43.038,43.038,0,1,1-9.324,67.946Zm12.087-48.761L103.876,83.208l18.335,18.338a25.929,25.929,0,1,0,0-36.672Zm-97.517,0a25.929,25.929,0,0,0,36.669,36.671L79.7,83.208,61.361,64.873a25.929,25.929,0,0,0-36.669,0Zm60.5-23.759a7.105,7.105,0,0,0,2.782,5.639L85.188,60.445H98.446L95.666,46.791a7.64,7.64,0,0,0,2.779-5.9,6.54,6.54,0,0,0-6.629-6.5A6.73,6.73,0,0,0,85.188,41.114Zm-5.58-25.5V27.475h24.728V15.617a5.868,5.868,0,0,0-6.141-6H85.433A5.616,5.616,0,0,0,79.608,15.617Z" transform="translate(5 5)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
