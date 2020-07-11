@@ -48,42 +48,6 @@ public class SettingsFragment extends Fragment {
             defaultAuthRadioGroup.check(R.id.passwordRadioButton);
         }
         defaultAuthRadioGroup.setOnCheckedChangeListener(defaultAuthRadioGroupOnCheckedChangedListener);
-
-        RadioGroup themeRadioGroup = (RadioGroup) view.findViewById(R.id.themeRadioGroup);
-        boolean currentUseDarkThemeSetting = SettingsHelper.getUseDarkTeme(getContext());
-        if (currentUseDarkThemeSetting == true) {
-            themeRadioGroup.check(R.id.darkThemeRadioButton);
-        } else {
-            themeRadioGroup.check(R.id.lightThemeRadioButton);
-        }
-        themeRadioGroup.setOnCheckedChangeListener(themeRadioGroupOnCheckedChangedListener);
-
-
-        /*sdCardTextView = (TextView) view.findViewById(R.id.sdCardTextView);
-        sdCardEditButton = (Button) view.findViewById(R.id.sdCardEditButton);*/
-       /* if (!StorageAccessFrameworkHelper.canSupportSDCardOnAndroidVersion()) {
-            view.findViewById(R.id.sdCardTitleTextView).setVisibility(View.GONE);
-            sdCardTextView.setVisibility(View.GONE);
-            sdCardEditButton.setVisibility(View.GONE);
-        } else {
-            sdCardEditButton.setOnClickListener(sdCardEditButtonOnClickListener);
-        }*/
-
-        /*update ui to match theme preferences*/
-        if (SettingsHelper.getUseDarkTeme(getContext())) {
-            int textColor = ((MainActivity)getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary);
-            ((RadioButton) aescryptVersionRadioGroup.findViewById(R.id.version1RadioButton)).setTextColor(textColor);
-            ((RadioButton) aescryptVersionRadioGroup.findViewById(R.id.version2RadioButton)).setTextColor(textColor);
-            ((RadioButton) defaultAuthRadioGroup.findViewById(R.id.fingerprintRadioButton)).setTextColor(textColor);
-            ((RadioButton) defaultAuthRadioGroup.findViewById(R.id.passwordRadioButton)).setTextColor(textColor);
-            ((RadioButton) themeRadioGroup.findViewById(R.id.darkThemeRadioButton)).setTextColor(textColor);
-            ((RadioButton) themeRadioGroup.findViewById(R.id.lightThemeRadioButton)).setTextColor(textColor);
-
-            ((TextView) view.findViewById(R.id.aescryptVersionTitleTextView)).setTextColor(textColor);
-            ((TextView) view.findViewById(R.id.defaultAuthTitleTextView)).setTextColor(textColor);
-            ((TextView) view.findViewById(R.id.themeTitleTextView)).setTextColor(textColor);
-            ((TextView) view.findViewById(R.id.sdCardTitleTextView)).setTextColor(textColor);
-        }
         return view;
     }
 
@@ -132,21 +96,6 @@ public class SettingsFragment extends Fragment {
 
                     break;
             }
-        }
-    };
-
-    private RadioGroup.OnCheckedChangeListener themeRadioGroupOnCheckedChangedListener = new RadioGroup.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-            switch (checkedId) {
-                case R.id.darkThemeRadioButton:
-                    SettingsHelper.setUseDarkTheme(getContext(), true);
-                    break;
-                case R.id.lightThemeRadioButton:
-                    SettingsHelper.setUseDarkTheme(getContext(), false);
-                    break;
-            }
-            ((MainActivity)getActivity()).recreate();
         }
     };
 
