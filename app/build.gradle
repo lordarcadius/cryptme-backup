@@ -44,4 +44,5 @@ dependencies {
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'me.aflak.libraries:fingerprint:2.5.3'
     implementation 'co.infinum:goldfinger:1.2.0'
+    implementation 'com.github.msayan:tutorial-view:v1.0.10'
 }
