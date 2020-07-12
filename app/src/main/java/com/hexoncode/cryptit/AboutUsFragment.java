@@ -1,5 +1,7 @@
 package com.hexoncode.cryptit;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +10,7 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -25,7 +28,8 @@ public class AboutUsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public TextView madeInIndia;
+    public TextView madeInIndia, cryptItText, aboutCryptText, aboutDevText;
+    public ImageView web, git, insta, twitter;
 
     public AboutUsFragment() {
         // Required empty public constructor
@@ -62,8 +66,41 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_about_us, container, false);
         madeInIndia = view.findViewById(R.id.madeInIndia);
-        madeInIndia.setText(Html.fromHtml("<font color=#ffffff>Made in India</font><font color=#40ACFF> © </font><font color=#ffffff>2020</font>"));
+        cryptItText = view.findViewById(R.id.crypt_it_text);
+        aboutCryptText = view.findViewById(R.id.about_crypt_text);
+        aboutDevText = view.findViewById(R.id.crypt_dev_text);
+        web = view.findViewById(R.id.web);
+        git = view.findViewById(R.id.github);
+        twitter = view.findViewById(R.id.twitter);
+        insta = view.findViewById(R.id.insta);
 
+        madeInIndia.setText(Html.fromHtml("<font color=#FFFFFF>Made with ❤ in India By </font><font color=#40ACFFf>Hexon</font><font color=#FFFFFF>Code</font>"));
+        cryptItText.setText(Html.fromHtml("<font color=#FFFFFF>Crypt-</font><font color=#40ACFFf>It</font>"));
+        aboutDevText.setText(Html.fromHtml("<font color=#FFFFFF>By </font><font color=#40ACFFf>Hexon</font><font color=#FFFFFF>Code</font>"));
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.hexoncode.com")));
+            }
+        });
+        git.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.github.com/hexoncode")));
+            }
+        });
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.twitter.com/hexoncode")));
+            }
+        });
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/hexoncode")));
+            }
+        });
         return view;
     }
 }

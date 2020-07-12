@@ -106,4 +106,6 @@
     <string name="recent_files">Recent Files</string>
     <string name="decrypted_files">Decrypted Files</string>
     <string name="search_for_files">Search for files..</string>
+    <string name="about_crypt_text"><b>Crypt-It</b> is an app which helps you secure your files with the help of military level algorithms. The encrypted files cannot be decrypted without your fingerprint or password.
+    \n\nThe app is developed by <b>HexonCode</b>. We are a firm who develop beautiful Android app, Websites, Designs, Graphics and many other things.</string>
 </resources>
