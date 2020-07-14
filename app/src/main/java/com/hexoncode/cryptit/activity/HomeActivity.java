@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -24,7 +23,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -41,7 +39,6 @@ import com.hexoncode.cryptit.FilePicker.FilePicker;
 import com.hexoncode.cryptit.FilePicker.IconFilePicker;
 import com.hexoncode.cryptit.FilePicker.ListFilePicker;
 import com.hexoncode.cryptit.GlobalDocumentFileStateHolder;
-import com.hexoncode.cryptit.MainActivityFragment;
 import com.hexoncode.cryptit.SettingsHelper;
 import com.hexoncode.cryptit.fragment.DecryptFragment;
 import com.hexoncode.cryptit.fragment.EncryptFragment;
@@ -428,7 +425,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;*/
 
             case R.id.about:
-                //todo
+                Intent aboutIntent = new Intent(this, AboutUs.class);
+                startActivity(aboutIntent);
                 break;
 
             case R.id.contact:
