@@ -16,6 +16,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import android.widget.Toast;
 
+import com.hexoncode.cryptit.activity.HomeActivity;
+
 /**
  * Crypto service runs a background thread that does the encryption and decryption operations.
  */
@@ -32,6 +34,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
     public static final String VERSION_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.VERSION_EXTRA_KEY";
     public static final String OPERATION_TYPE_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.OPERATION_TYPE_EXTRA_KEY";
     public static final String DELETE_INPUT_FILE_KEY = "com.divyanshu.cryptit.CryptoService.DELETE_INPUT_FILE_KEY";
+    public static final String PASSWORD = "com.hexoncode.cryptit.CryptoService.PASSWORD_EXTRA_KEY";
 
     public static final String NOTIFICATION_CHANNEL_ID = "com.divyanshu.cryptit.CryptoService.OPERATION_TYPE_EXTRA_KEY";
 
@@ -61,7 +64,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
         String inputFileName = intent.getStringExtra(INPUT_FILE_NAME_EXTRA_KEY);
         String outputFileName = intent.getStringExtra(OUTPUT_FILE_NAME_EXTRA_KEY);
         int version = intent.getIntExtra(VERSION_EXTRA_KEY, SettingsHelper.AESCRYPT_DEFAULT_VERSION);
-        String password = MainActivityFragment.getAndClearPassword();
+        String password = intent.getStringExtra(PASSWORD);
         boolean operationType = intent.getBooleanExtra(OPERATION_TYPE_EXTRA_KEY, CryptoThread.OPERATION_TYPE_DECRYPTION);
         boolean deleteInputFile = intent.getBooleanExtra(DELETE_INPUT_FILE_KEY, false);
 
@@ -93,7 +96,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
         new Handler(getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -117,7 +120,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
 
-        Intent resultIntent = new Intent(this, MainActivity.class);
+        Intent resultIntent = new Intent(this, HomeActivity.class);
         PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent, 0);
 
         builder.setSmallIcon(operationType == CryptoThread.OPERATION_TYPE_ENCRYPTION ? R.drawable.ic_lock_png : R.drawable.ic_unlock_png);
@@ -126,6 +129,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
         if (progress < 0) {
             builder.setContentTitle(getString(R.string.app_name));
             builder.setContentText(getString(R.string.operation_in_progress));
+
         } else if (progress < 100) {
             String title = operationType == CryptoThread.OPERATION_TYPE_ENCRYPTION ? getString(R.string.encrypting) : getString(R.string.decrypting);
             if (minutesToCompletion != -1) {
@@ -136,9 +140,16 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
             }
             builder.setContentTitle(title);
             builder.setProgress(100, progress, false);
+
         } else {
             builder.setContentTitle(getString(R.string.app_name));
             builder.setContentText(getString(completedMessageStringId));
+
+            if (operationType == CryptoThread.OPERATION_TYPE_ENCRYPTION) {
+                showToastOnGuiThread("Encryption complete");
+            } else {
+                showToastOnGuiThread("Decryption complete");
+            }
         }
         return builder.build();
     }

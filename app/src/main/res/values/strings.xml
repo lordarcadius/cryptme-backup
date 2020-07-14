@@ -91,7 +91,8 @@
     <string name="theme">Theme</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
-    <string name="delete_input_file_after_uploading">Delete Input file after uploading</string>
+    <string name="delete_input_file_after_uploading">Delete Input file post encryption</string>
+    <string name="delete_output_file_after_uploading">Delete Input file post decryption</string>
     <string name="upload_a_file">Upload a file</string>
     <string name="enter_password">Enter Password</string>
     <!-- TODO: Remove or change this placeholder text -->

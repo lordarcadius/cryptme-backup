@@ -28,6 +28,7 @@ import com.hexoncode.cryptit.MainActivity;
 import com.hexoncode.cryptit.R;
 import com.hexoncode.cryptit.SettingsHelper;
 import com.hexoncode.cryptit.StorageAccessFrameworkHelper;
+import com.hexoncode.cryptit.activity.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -104,8 +105,8 @@ public abstract class FilePicker extends Fragment {
                 if (isOutput) {
                     fileNameEditText.setText(clickedFile.getName());
                 } else {
-                    ((MainActivity) getActivity()).filePicked(clickedFile.getParentFile(), clickedFile.getName(), isOutput);
-                    ((MainActivity) getActivity()).superOnBackPressed();
+                    ((HomeActivity) getActivity()).filePicked(clickedFile.getParentFile(), clickedFile.getName(), isOutput);
+                    ((HomeActivity) getActivity()).onBackPressed();
                 }
             }
         }

@@ -23,7 +23,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private FloatingActionButton fab;
     private boolean mainActivityFragmentOnTop = true;
 
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle(title);
             }
         }
-
 
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

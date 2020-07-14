@@ -278,7 +278,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     /*
     * Implementation of ProgressDisplayer interface. Called by CryptoThread to show progress.
     * Has to be done on the gui thread.
-     */
+    */
     @Override
     public void update(final boolean operationType, final int progress, final int completedMessageStringId, final int minutesToCompletion, final int secondsToCompletion) {
         final Context context = getContext();
@@ -373,7 +373,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     /*
     * Set the inputFileParentDirectory (isOutput == false) or outputFileParentDirectory (isOutput == true) member variable and change UI of the file select buttons.
     * Pass null to clear the uri value and reset ui.
-     */
+    */
     private void updateFileUI(boolean isOutput) {
         String filePath;
         TextView filePathTextView;
