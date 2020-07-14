@@ -52,6 +52,7 @@
         </RadioGroup>
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/defaultAuthTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,6 +62,7 @@
             android:text="Default Authentication Method" />
 
         <RadioGroup
+            android:visibility="gone"
             android:id="@+id/defaultAuthRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,6 +96,7 @@
         </RadioGroup>
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/themeTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,6 +106,7 @@
             android:text="@string/theme" />
 
         <RadioGroup
+            android:visibility="gone"
             android:id="@+id/themeRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,6 +139,7 @@
         </RadioGroup>
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/outputTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,6 +149,7 @@
             android:text="@string/theme" />
 
         <RadioGroup
+            android:visibility="gone"
             android:id="@+id/outputRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

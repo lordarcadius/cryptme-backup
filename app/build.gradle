@@ -29,6 +29,10 @@ android {
     lintOptions {
         disable 'MissingTranslation'
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -44,4 +48,7 @@ dependencies {
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'me.aflak.libraries:fingerprint:2.5.3'
     implementation 'co.infinum:goldfinger:1.2.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation project(path: ':market_licensing')
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 }
