@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "5923610086",
+    "firebase_url": "https://crypt-it-83942.firebaseio.com",
+    "project_id": "crypt-it-83942",
+    "storage_bucket": "crypt-it-83942.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5923610086:android:6ad60866cdd3dadad08a27",
+        "android_client_info": {
+          "package_name": "com.hexoncode.cryptit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5923610086-sepetpginh07gr5rsscbrtp8ip470snp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCJ4q7X6kiIYhz1KxKerxYPQoF_-wd2gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5923610086-sepetpginh07gr5rsscbrtp8ip470snp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
