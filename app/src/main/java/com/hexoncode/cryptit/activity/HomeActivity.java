@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ShareCompat;
 import androidx.core.view.GravityCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -25,6 +26,8 @@ import android.os.Environment;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,6 +48,7 @@ import com.hexoncode.cryptit.fragment.EncryptFragment;
 import com.hexoncode.cryptit.fragment.ExploreFragment;
 import com.hexoncode.cryptit.R;
 import com.hexoncode.cryptit.util.LoadingDialog;
+import com.hexoncode.cryptit.util.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -68,6 +72,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     private boolean currentOperation;
     private LoadingDialog loadingDialog;
+    private ViewPager viewPager;
 
     private EncryptFragment encryptFragment;
     private DecryptFragment decryptFragment;
@@ -90,25 +95,45 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             new Handler(context.getMainLooper()).post(() -> {
 
                 if (progress != 100) {
-                    if (!loadingDialog.isShowing()) {
-                        loadingDialog.showLoading();
+
+                    if (!HomeActivity.this.isFinishing()) {
+
+                        if (!loadingDialog.isShowing()) {
+                            loadingDialog.showLoading();
+                        }
+
                     }
                 } else {
-                    loadingDialog.hideLoading();
-                    if (exploreFragment != null) {
-                        exploreFragment.loadData();
+                    if (!HomeActivity.this.isFinishing()) {
+                        loadingDialog.hideLoading();
+                        if (exploreFragment != null) {
+                            exploreFragment.loadData();
+                        }
                     }
                 }
             });
         }
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(getColor(R.color.colorPrimaryDark));
+        window.setNavigationBarColor(getColor(R.color.colorPrimaryDark));
+
         setContentView(R.layout.activity_home);
         prefs = getApplicationContext().getSharedPreferences("APP_PREFS", MODE_PRIVATE);
+
+        //to prevent direct activity launch
+        String deviceId = getIntent().getStringExtra("deviceId");
+        if (deviceId == null || !deviceId.equals(Utils.getDeviceId(this))) {
+            finish();
+            return;
+        }
+
         initView();
 
         CryptoThread.registerForProgressUpdate(PROGRESS_DISPLAYER_ID, this);
@@ -175,7 +200,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fragments.add(decryptFragment);
         fragments.add(exploreFragment);
 
-        final ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         viewPager.setOffscreenPageLimit(fragments.size());
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, fragments));
 
@@ -451,20 +476,39 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 }
                 break;
 
+            case R.id.invite:
+                invite();
+                break;
+
         }
 
         return false;
     }
 
+    private void invite() {
+
+        String message = "I am using Crypt-It to secure my data from malicious apps with military-grade encryption algorithms. Download it today from the Google Play Store.\n\nhttp://play.google.com/store/apps/details?id=" + getPackageName();
+
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setText(message)
+                .setType("text/plain")
+                .setChooserTitle("Invite using")
+                .startChooser();
+    }
+
     @Override
     public void onBackPressed() {
-        removeFragment();
-        super.onBackPressed();
+        if (isFragmentAdded) {
+            removeFragment();
+            super.onBackPressed();
+        } else if (viewPager != null && viewPager.getCurrentItem() != 0) {
+            viewPager.setCurrentItem(0);
+        } else super.onBackPressed();
     }
 
     @Override
     protected void onDestroy() {
-        CryptoThread.cancel();
         super.onDestroy();
     }
 }

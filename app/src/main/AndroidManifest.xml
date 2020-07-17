@@ -2,30 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hexoncode.cryptit">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.AboutUs" />
-        <activity android:name=".OnBoardingActivity" />
-        <activity android:name=".activity.SettingsActivity" />
-        <activity android:name=".activity.FilePickerActivity" />
+        <activity android:name=".activity.DonationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.OnboardingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AboutUs"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FilePickerActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.HomeActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.SplashActivity"
-            android:theme="@style/Splash">
+            android:theme="@style/Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,13 +45,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-        <service android:name=".CryptoService" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -51,6 +61,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <service android:name=".CryptoService" />
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
     </application>
 
 </manifest>

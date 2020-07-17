@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Crypt-IT</string>
+    <string name="app_name">Crypt-It</string>
     <string name="cancel">Cancel</string>
     <string name="encrypting">Encrypting</string>
     <string name="confirm_password">Confirm Password</string>
@@ -91,8 +91,8 @@
     <string name="theme">Theme</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
-    <string name="delete_input_file_after_uploading">Delete Input file post encryption</string>
-    <string name="delete_output_file_after_uploading">Delete Input file post decryption</string>
+    <string name="delete_input_file_after_uploading">Delete input file post encryption</string>
+    <string name="delete_output_file_after_uploading">Delete input file post decryption</string>
     <string name="upload_a_file">Upload a file</string>
     <string name="enter_password">Enter Password</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -101,12 +101,17 @@
     <string name="encrypt">Encrypt</string>
     <string name="ask_everytime">Ask Everytime</string>
     <string name="same_as_input">Same as Input</string>
-    <string name="explorer">explorer</string>
+    <string name="explorer">Explorer</string>
     <string name="encrypted_files">Encrypted Files</string>
     <string name="view_all">View all</string>
     <string name="recent_files">Recent Files</string>
     <string name="decrypted_files">Decrypted Files</string>
     <string name="search_for_files">Search for files..</string>
-    <string name="about_crypt_text"><b>Crypt-It</b> is an app which helps you secure your files with the help of military level algorithms. The encrypted files cannot be decrypted without your fingerprint or password.
-    \n\nThe app is developed by <b>HexonCode</b>. We are a firm who develop beautiful Android app, Websites, Designs, Graphics and many other things.</string>
+    <string name="about_crypt_text">Crypt-It is an app that helps you secure your files with military-grade encryption algorithms. The encrypted files cannot be decrypted with any other tool or without your password or fingerprint.
+    \n\nThis app is developed by Hexoncode. We are a team of highly skilled developers and designers who develop smooth and beautiful apps, websites, designs, graphics and many more cool things.</string>
+    <string name="donate_text">We are a team of self-established, highly motivated developers and designers who put love in work. Your donations will help us make more awesome things like this app.</string>
+    <!--    onboarding-->
+    <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal you data.</string>
+    <string name="onboarding_encrypt">With a 256-bit military-grade encryption algorithm, 3 way key salting and multi-level remuneration, we ensure the files we encrypt can never be touched or fiddled with, without your consent.</string>
+    <string name="onboarding_decrypt">Files encrypted by Crypt-It can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-It, That\'s it!</string>
 </resources>

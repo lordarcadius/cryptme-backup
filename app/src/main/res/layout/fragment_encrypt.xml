@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.EncryptFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232637"
-    tools:context=".fragment.EncryptFragment">
+    android:background="#232637">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -67,7 +71,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/deleteInputFileCheckbox"
             android:buttonTint="@color/colorAccent"
-            android:checked="true"
+            android:checked="false"
             android:textSize="16sp"
             android:textColor="#fff"
             android:text="@string/delete_input_file_after_uploading"
@@ -124,6 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
             android:orientation="vertical">
 
             <Button
@@ -152,3 +157,5 @@
     </LinearLayout>
 
 </RelativeLayout>
+
+</ScrollView>

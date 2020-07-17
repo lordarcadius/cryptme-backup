@@ -11,6 +11,8 @@ import android.os.Environment;
 import androidx.core.os.EnvironmentCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.appcompat.app.AlertDialog;
+
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 
 import java.io.File;
@@ -257,4 +259,18 @@ public final class StorageAccessFrameworkHelper {
         }
         return context.getContentResolver().openOutputStream(outputFile.getUri());
     }
+
+    public static File getFileOfOutputStream(Context context, String outputFilename) throws FileNotFoundException{
+        DocumentFile outputFile = GlobalDocumentFileStateHolder.getOutputFileParentDirectory().createFile("", outputFilename);
+        if (outputFile == null) {
+            throw new FileNotFoundException();
+        }
+
+        String filePath = outputFile.getUri().getPath();
+        if (filePath != null) {
+            return new File(filePath);
+        }
+        return null;
+    }
+
 }

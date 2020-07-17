@@ -1,7 +1,10 @@
 package com.hexoncode.cryptit;
 
+import android.util.Log;
+
 import androidx.documentfile.provider.DocumentFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -54,6 +57,8 @@ public class CryptoThread extends Thread {
     private boolean deleteInputFile = false;
     private static int completedMessageStringId = R.string.done;
 
+    private File fileToDeleteIfDecryptionFails;
+
     /**
      * Takes a cryptoService, input and output uris, the password, a version (use VERSION_X constants), and operation type (defined by the OPERATION_TYPE_X constants)
      */
@@ -89,6 +94,9 @@ public class CryptoThread extends Thread {
         //get the input stream
         try {
             inputStream = StorageAccessFrameworkHelper.getFileInputStream(cryptoService, inputFileName);
+
+            Log.d("getFileInputStream", inputFileName);
+
         } catch (IOException ioe) {
             successful = false;
             ioe.printStackTrace();
@@ -98,6 +106,9 @@ public class CryptoThread extends Thread {
         //get the output stream
         try {
             outputStream = StorageAccessFrameworkHelper.getFileOutputStream(cryptoService, outputFileName);
+
+            fileToDeleteIfDecryptionFails = StorageAccessFrameworkHelper.getFileOfOutputStream(cryptoService, outputFileName);
+
         } catch (IOException ioe) {
             successful = false;
             ioe.printStackTrace();
@@ -130,6 +141,16 @@ public class CryptoThread extends Thread {
             } catch (NullPointerException npe) {
                 successful = false;
                 cryptoService.showToastOnGuiThread(npe.getMessage());
+            } finally {
+
+                try {
+                    if (!successful && operationType == OPERATION_TYPE_DECRYPTION && fileToDeleteIfDecryptionFails != null) {
+                        fileToDeleteIfDecryptionFails.delete();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
             }
         }
 

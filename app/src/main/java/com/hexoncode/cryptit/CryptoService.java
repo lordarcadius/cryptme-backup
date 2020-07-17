@@ -125,6 +125,7 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
 
         builder.setSmallIcon(operationType == CryptoThread.OPERATION_TYPE_ENCRYPTION ? R.drawable.ic_lock_png : R.drawable.ic_unlock_png);
         builder.setContentIntent(resultPendingIntent);
+        builder.setAutoCancel(true);
 
         if (progress < 0) {
             builder.setContentTitle(getString(R.string.app_name));

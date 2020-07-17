@@ -5,19 +5,19 @@
     <item
         android:id="@+id/encrypt_view"
         android:enabled="true"
-        android:icon="@drawable/ic_encrypt"
+        android:icon="@drawable/ic_tab_encrypt"
         android:title="@string/encrypt" />
 
     <item
         android:id="@+id/decrypt_view"
         android:enabled="true"
-        android:icon="@drawable/ic_decrypt"
+        android:icon="@drawable/ic_tab_decrypt"
         android:title="@string/decrypt" />
 
     <item
         android:id="@+id/explorer_view"
         android:enabled="true"
-        android:icon="@drawable/ic_explorer"
+        android:icon="@drawable/ic_tab_explorer"
         android:title="@string/explorer" />
 
 </menu>

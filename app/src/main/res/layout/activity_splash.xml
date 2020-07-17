@@ -8,14 +8,25 @@
     tools:context=".activity.SplashActivity">
 
     <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_lock"/>
+        android:id="@+id/branding"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_crypt_logo"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/madeInIndia"
+        android:layout_marginBottom="32dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/madeInIndia"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -1,2 +1,2 @@
-include ':market_licensing'
 include ':app'
+include ':market_licensing'
