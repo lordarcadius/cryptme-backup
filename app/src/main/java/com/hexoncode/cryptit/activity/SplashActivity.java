@@ -62,7 +62,6 @@ public class SplashActivity extends AppCompatActivity {
         madeInIndia.setText("Made with ❤ in India by Hexoncode");
 
         init();
-        new Handler().postDelayed(() -> runOnUiThread(() -> findViewById(R.id.progressBar).setVisibility(View.VISIBLE)), 1500);
     }
 
     private void init() {
@@ -72,6 +71,8 @@ public class SplashActivity extends AppCompatActivity {
 
         if (deviceId == null || !deviceId.equals(Utils.getDeviceId(SplashActivity.this))) {
 
+            new Handler().postDelayed(() -> runOnUiThread(() -> findViewById(R.id.progressBar).setVisibility(View.VISIBLE)), 1500);
+
             if (Utils.isNetworkAvailable(this)) {
                 checkLicense();
             } else {
@@ -79,7 +80,8 @@ public class SplashActivity extends AppCompatActivity {
             }
 
         } else {
-            launchHome();
+
+            new Handler().postDelayed(this::launchHome, 800);
         }
 
     }
