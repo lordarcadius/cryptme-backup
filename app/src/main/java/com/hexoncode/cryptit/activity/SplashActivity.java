@@ -71,7 +71,7 @@ public class SplashActivity extends AppCompatActivity {
 
         if (deviceId == null || !deviceId.equals(Utils.getDeviceId(SplashActivity.this))) {
 
-            new Handler().postDelayed(() -> runOnUiThread(() -> findViewById(R.id.progressBar).setVisibility(View.VISIBLE)), 1500);
+            new Handler().postDelayed(() -> runOnUiThread(() -> findViewById(R.id.progressLayout).setVisibility(View.VISIBLE)), 1500);
 
             if (Utils.isNetworkAvailable(this)) {
                 checkLicense();
@@ -79,10 +79,7 @@ public class SplashActivity extends AppCompatActivity {
                 showNoInternetDialog();
             }
 
-        } else {
-
-            new Handler().postDelayed(this::launchHome, 800);
-        }
+        } else launchHome();
 
     }
 

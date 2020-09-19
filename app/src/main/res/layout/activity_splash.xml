@@ -14,15 +14,30 @@
         android:src="@drawable/ic_crypt_logo"
         android:layout_centerInParent="true"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:indeterminateTint="@color/colorAccent"
-        android:layout_centerHorizontal="true"
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_above="@id/madeInIndia"
         android:layout_marginBottom="32dp"
-        android:visibility="invisible"/>
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:textColor="#fff"
+            android:layout_marginStart="16dp"
+            android:text="Confirming your purchase"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/madeInIndia"
