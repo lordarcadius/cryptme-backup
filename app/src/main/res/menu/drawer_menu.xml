@@ -27,6 +27,11 @@
             android:icon="@drawable/ic_faq"/>
 
         <item
+            android:id="@+id/donate"
+            android:title="Donate"
+            android:icon="@drawable/ic_money"/>
+
+        <item
             android:id="@+id/rate"
             android:title="Rate"
             android:icon="@drawable/ic_star"/>

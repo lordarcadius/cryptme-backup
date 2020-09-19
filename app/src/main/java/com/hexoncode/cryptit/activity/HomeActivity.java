@@ -485,6 +485,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(faqIntent);
                 break;
 
+            case R.id.donate:
+                Intent donateIntent = new Intent(this, DonationActivity.class);
+                startActivity(donateIntent);
+                break;
+
 
         }
 
