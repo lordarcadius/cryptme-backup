@@ -33,6 +33,7 @@ import com.hexoncode.cryptit.R;
 import com.hexoncode.cryptit.lvl.SecureUtils;
 import com.hexoncode.cryptit.util.Publisher;
 import com.hexoncode.cryptit.util.Utils;
+import com.pddstudio.preferences.encrypted.EncryptedPreferences;
 
 import org.json.JSONObject;
 
@@ -66,10 +67,19 @@ public class SplashActivity extends AppCompatActivity {
 
     private void init() {
 
-        if (Utils.isNetworkAvailable(this)) {
-            checkLicense();
+        EncryptedPreferences encryptedPreferences = new EncryptedPreferences.Builder(SplashActivity.this).withEncryptionPassword(Utils.getDeviceId(SplashActivity.this)).build();
+        String deviceId = encryptedPreferences.getString("device", null);
+
+        if (deviceId == null || !deviceId.equals(Utils.getDeviceId(SplashActivity.this))) {
+
+            if (Utils.isNetworkAvailable(this)) {
+                checkLicense();
+            } else {
+                showNoInternetDialog();
+            }
+
         } else {
-            showNoInternetDialog();
+            launchHome();
         }
 
     }
@@ -121,6 +131,10 @@ public class SplashActivity extends AppCompatActivity {
                         if (jsonObject.has("deviceid")) {
                             String deviceId = jsonObject.getString("deviceid");
                             if (deviceId.equals(Utils.getDeviceId(SplashActivity.this))) {
+
+                                EncryptedPreferences encryptedPreferences = new EncryptedPreferences.Builder(SplashActivity.this).withEncryptionPassword(deviceId).build();
+                                encryptedPreferences.edit().putString("device", deviceId).apply();
+
                                 launchHome();
                             } else {
                                 showPreventDialog("0x2");
