@@ -52,6 +52,7 @@ public class OnboardingActivity extends AppCompatActivity {
         fragments.add(OnboardingFragment.newInstance(R.drawable.welcome, "Welcome", getString(R.string.onboarding_welcome)));
         fragments.add(OnboardingFragment.newInstance(R.drawable.encrypto, "Encrypt", getString(R.string.onboarding_encrypt)));
         fragments.add(OnboardingFragment.newInstance(R.drawable.decrypto, "Decrypt", getString(R.string.onboarding_decrypt)));
+        fragments.add(OnboardingFragment.newInstance(R.drawable.trusted, "Trust", getString(R.string.onboarding_trust)));
 
         viewPager.setOffscreenPageLimit(fragments.size());
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

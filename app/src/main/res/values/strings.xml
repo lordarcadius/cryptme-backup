@@ -66,7 +66,9 @@
     <string name="folder_icon_creator_link">https://www.flaticon.com/authors/madebyoliver</string>
     <string name="folder_icon_creator_name">Madebyoliver</string>
     <string name="file_icon_creator_link">https://www.flaticon.com/authors/madebyoliver</string>
-    <string name="file_icon_creator_name">Madebyoliver</string>
+    <string name="file_icon_creator_name">freepik</string>
+    <string name="trust_icon_creator_link">https://www.flaticon.com/authors/freepik</string>
+    <string name="trust_icon_creator_name">Madebyoliver</string>
     <string name="choose_input_file">Choose input file</string>
     <string name="choose_output_file">Choose output file</string>
     <string name="file_is_a_directory">File is a directory</string>
@@ -99,7 +101,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="decrypt">Decrypt</string>
     <string name="encrypt">Encrypt</string>
-    <string name="ask_everytime">Ask Everytime</string>
+    <string name="ask_everytime">Ask Every time</string>
     <string name="same_as_input">Same as Input</string>
     <string name="explorer">Explorer</string>
     <string name="encrypted_files">Encrypted Files</string>
@@ -114,4 +116,5 @@
     <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal your data.</string>
     <string name="onboarding_encrypt">With a 256-bit military-grade encryption algorithm, 3 way key salting and multi-level remuneration, we ensure the files we encrypt can never be touched or fiddled with, without your consent.</string>
     <string name="onboarding_decrypt">Files encrypted by Crypt-It can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-It, That\'s it!</string>
+    <string name="onboarding_trust">We respect your privacy and that is why your files don\'t leace your phone. Encryption and decryption happen locally and without the internet. To ensure only genuine and non-tampered copies, we perform a purchase and integrity check on first launch which required internet.</string>
 </resources>
