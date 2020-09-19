@@ -22,6 +22,11 @@
             android:icon="@drawable/ic_mail"/>
 
         <item
+            android:id="@+id/faq"
+            android:title="FAQ"
+            android:icon="@drawable/ic_faq"/>
+
+        <item
             android:id="@+id/rate"
             android:title="Rate"
             android:icon="@drawable/ic_star"/>

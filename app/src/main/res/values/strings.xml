@@ -117,4 +117,18 @@
     <string name="onboarding_encrypt">With a 256-bit military-grade encryption algorithm, 3 way key salting and multi-level remuneration, we ensure the files we encrypt can never be touched or fiddled with, without your consent.</string>
     <string name="onboarding_decrypt">Files encrypted by Crypt-It can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-It, That\'s it!</string>
     <string name="onboarding_trust">We respect your privacy and that is why your files don\'t leave your phone. Encryption and decryption happen locally and without the internet. To ensure only genuine and non-tampered copies, we perform a purchase and integrity check on the first launch which required the internet.</string>
+    <string name="question_one">Q. Why does the app need internet permission?</string>
+    <string name="question_two">Q. Do I need to have internet to use this app?</string>
+    <string name="question_three">Q. Does this app store my files to cloud?</string>
+    <string name="question_four">Q. Is this app really made in India?</string>
+    <string name="question_five">Q. How will the application help me? </string>
+    <string name="answer_one">A. Privacy is our utmost concern and is the reason we created this application.
+To ensure only genuine and non-tampered copies of the application are installed in your device, we perform a purchase and integrity check during the first launch.
+This requires internet access after which, the entire application functions offline.</string>
+    <string name="answer_two">A. No, absolutely not. Internet is required only during the first launch to validate the application\'s integrity as already mentioned above. The app completely functions offline.</string>
+    <string name="answer_three">A. No! We do not send any of your files to the cloud. Your files stay on your phone and nothing goes out of it. The app is completely safe to use without any hesitation.</string>
+    <string name="answer_four">A. Yes, the app is completely developed in India by an Indian startup \'Hexoncode\'. Read more about us in the About section of the app.</string>
+    <string name="answer_five">A. The application can be used to encrypt sensitive content while sharing them over insecure networks, uploading to public clouds, or even to prevent someone from accessing the information.
+The application supports all file formats and can be used in all situations to add a safety layer to your files.</string>
+
 </resources>

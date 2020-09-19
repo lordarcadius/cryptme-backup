@@ -480,6 +480,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 invite();
                 break;
 
+            case R.id.faq:
+                Intent faqIntent = new Intent(this, FaqActivity.class);
+                startActivity(faqIntent);
+                break;
+
+
         }
 
         return false;
