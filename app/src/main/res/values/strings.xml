@@ -111,7 +111,7 @@
     \n\nThis app is developed by Hexoncode. We are a team of highly skilled developers and designers who develop smooth and beautiful apps, websites, designs, graphics and many more cool things.</string>
     <string name="donate_text">We are a team of self-established, highly motivated developers and designers who put love in work. Your donations will help us make more awesome things like this app.</string>
     <!--    onboarding-->
-    <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal you data.</string>
+    <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal your data.</string>
     <string name="onboarding_encrypt">With a 256-bit military-grade encryption algorithm, 3 way key salting and multi-level remuneration, we ensure the files we encrypt can never be touched or fiddled with, without your consent.</string>
     <string name="onboarding_decrypt">Files encrypted by Crypt-It can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-It, That\'s it!</string>
 </resources>

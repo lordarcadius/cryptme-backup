@@ -1,0 +1,4 @@
+Keystore: hexoncode-keystore.jks
+Keystore Password: keystore@hexoncode
+Alias: hexoncode
+Alias Password: keystore@hexoncode

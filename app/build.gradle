@@ -8,8 +8,8 @@ android {
         applicationId "com.hexoncode.cryptit"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 15
-        versionName "1.0.3"
+        versionCode 16
+        versionName "1.0.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
