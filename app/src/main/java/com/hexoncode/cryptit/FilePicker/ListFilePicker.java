@@ -1,8 +1,10 @@
 package com.hexoncode.cryptit.FilePicker;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
+
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +23,8 @@ import com.hexoncode.cryptit.SettingsHelper;
 
 public class ListFilePicker extends FilePicker {
     /*inflates a layout, gets its listView
- * passes the listView and a callback for the adapter to the parent class
-  */
+     * passes the listView and a callback for the adapter to the parent class
+     */
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class ListFilePicker extends FilePicker {
 
             /*Change text to match theme*/
             if (SettingsHelper.getUseDarkTeme(getContext())) {
-                listItemTextView.setTextColor(((MainActivity)getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary));
+                listItemTextView.setTextColor(((MainActivity) getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary));
             }
             return convertView;
         }

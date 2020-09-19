@@ -25,7 +25,7 @@ public class CryptoThread extends Thread {
     public static boolean operationInProgress = false;
 
     /*
-    * Constants.
+     * Constants.
      */
     public static final boolean OPERATION_TYPE_ENCRYPTION = true;
     public static final boolean OPERATION_TYPE_DECRYPTION = false;
@@ -87,7 +87,7 @@ public class CryptoThread extends Thread {
         }
 
         //Send out an initial update for 0 progress.
-        int [] timeToCompletion = {-1,-1};
+        int[] timeToCompletion = {-1, -1};
         updateProgressDisplayers(0, 1, timeToCompletion);
         InputStream inputStream = null;
         OutputStream outputStream = null;
@@ -174,7 +174,8 @@ public class CryptoThread extends Thread {
         }
 
         //Send out one last progress update. It is important that ProgressDisplayers get the final update at 100%. Even if the operation was canceled.
-        timeToCompletion[0]=0; timeToCompletion[1]=0;
+        timeToCompletion[0] = 0;
+        timeToCompletion[1] = 0;
         updateProgressDisplayers(fileSize, fileSize, timeToCompletion);
 
         /*
@@ -193,14 +194,14 @@ public class CryptoThread extends Thread {
     public static void updateProgressOnInterval(long bytesRead) {
         totalBytesRead += bytesRead;
         if (totalBytesRead - lastUpdateAtByteNumber > updateIntervalInBytes) {
-            int [] timeToCompletion = getTimeToCompletion();
+            int[] timeToCompletion = getTimeToCompletion();
             lastUpdateAtByteNumber = totalBytesRead;
             updateProgressDisplayers(totalBytesRead, fileSize, timeToCompletion);
         }
     }
 
     //for each progress displayer: if not null: update, else remove it from progressDisplayers because it is null.
-    private static void updateProgressDisplayers(long workDone, long totalWork, int [] timeToCompletion) {
+    private static void updateProgressDisplayers(long workDone, long totalWork, int[] timeToCompletion) {
         int progress = 100;
         if (totalWork != 0) {
             progress = (int) ((workDone * 100) / totalWork);
@@ -220,11 +221,12 @@ public class CryptoThread extends Thread {
      */
     private static int[] getTimeToCompletion() {
         int[] timeToCompletion = {0, 0};
-        long bytesPerMillisecond = totalBytesRead/(System.currentTimeMillis()-timeOperationStarted);
-        long bytesPerSecond = bytesPerMillisecond*1000;
+        long bytesPerMillisecond = totalBytesRead / (System.currentTimeMillis() - timeOperationStarted);
+        long bytesPerSecond = bytesPerMillisecond * 1000;
         if (bytesPerSecond != 0) {
             int secondsToCompletion = (int) ((fileSize - totalBytesRead) / bytesPerSecond);
-            timeToCompletion[0] = secondsToCompletion / 60; timeToCompletion[1] = secondsToCompletion % 60;
+            timeToCompletion[0] = secondsToCompletion / 60;
+            timeToCompletion[1] = secondsToCompletion % 60;
         }
         return timeToCompletion;
     }

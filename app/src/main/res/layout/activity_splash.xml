@@ -12,7 +12,7 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:src="@drawable/ic_crypt_logo"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
     <LinearLayout
         android:id="@+id/progressLayout"
@@ -27,7 +27,7 @@
         <ProgressBar
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:indeterminateTint="@color/colorAccent"/>
+            android:indeterminateTint="@color/colorAccent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             android:fontFamily="@font/medium"
             android:textColor="#fff"
             android:layout_marginStart="16dp"
-            android:text="Confirming your purchase"/>
+            android:text="Confirming your purchase" />
 
     </LinearLayout>
 

@@ -10,6 +10,6 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:src="@drawable/ic_crypt_logo"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

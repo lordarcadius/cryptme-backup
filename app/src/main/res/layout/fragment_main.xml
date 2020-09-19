@@ -19,12 +19,12 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Encrypt"/>
+                android:text="Encrypt" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Decrypt"/>
+                android:text="Decrypt" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -54,15 +54,17 @@
                     style="@style/FilePathTextView" />
             </HorizontalScrollView>
         </LinearLayout>
+
         <View
             android:id="@+id/inputFilePathUnderlineView"
-            style="@style/FilePathUnderlineView"/>
+            style="@style/FilePathUnderlineView" />
+
         <CheckBox
             android:id="@+id/deleteInputFileCheckbox"
             android:text="@string/delete_input_file"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp" />
 
         <LinearLayout
             android:id="@+id/outputFilePathLinearLayout"
@@ -120,8 +122,7 @@
             android:visibility="gone"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"
-            android:text="Use Fingerprint instead"
-            />
+            android:text="Use Fingerprint instead" />
 
         <CheckBox
             android:id="@+id/showPasswordCheckbox"

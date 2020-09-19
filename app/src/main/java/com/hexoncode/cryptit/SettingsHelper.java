@@ -9,11 +9,11 @@ import android.content.SharedPreferences;
 
 public final class SettingsHelper {
 
-    public static final int FILE_ICON_VIEWER=0;
-    public static final int FILE_LIST_VIEWER=1;
+    public static final int FILE_ICON_VIEWER = 0;
+    public static final int FILE_LIST_VIEWER = 1;
 
     /*Defaults*/
-    public static final int FILE_DEFAULT_VIEWER=FILE_ICON_VIEWER;
+    public static final int FILE_DEFAULT_VIEWER = FILE_ICON_VIEWER;
     public static final boolean USE_DARK_THEME_DEFAULT = false;
     public static final int AESCRYPT_DEFAULT_VERSION = CryptoThread.VERSION_2;
 

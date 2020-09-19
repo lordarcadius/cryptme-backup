@@ -11,9 +11,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+
 import android.widget.Toast;
 
 import com.hexoncode.cryptit.activity.HomeActivity;
@@ -50,12 +52,12 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         /*
-        * If the user closes the activity (swiping out of recents) immediately after an operation is started, this method will get called a second time, but intent == null.
-        * Don't know why. Don't know how it doesn't trigger breakpoints, but intent==null means a NullPointerException. So this if condition handles that edge case.
-        * You might think that CryptoThread will still be running after it was started the first time this method was called.
-        * You'd be wrong. It starts, but stops when this method is called again, regardless of this if condition.
-        * It is probably a bug in Android since doing this to other applications that use services causes the same problem for them.
-        * */
+         * If the user closes the activity (swiping out of recents) immediately after an operation is started, this method will get called a second time, but intent == null.
+         * Don't know why. Don't know how it doesn't trigger breakpoints, but intent==null means a NullPointerException. So this if condition handles that edge case.
+         * You might think that CryptoThread will still be running after it was started the first time this method was called.
+         * You'd be wrong. It starts, but stops when this method is called again, regardless of this if condition.
+         * It is probably a bug in Android since doing this to other applications that use services causes the same problem for them.
+         * */
         if (intent == null) {
             //if stopForeground isn't called here, a sticky notification appears that cannot be closed (there is no operation in progress) without force quitting the app.
             stopForeground(true);
@@ -109,8 +111,8 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
     }
 
     /*
-    * Create the notification that is displayed while the operation is ongoing.
-    * if progress < 0: displayed without progress bar
+     * Create the notification that is displayed while the operation is ongoing.
+     * if progress < 0: displayed without progress bar
      */
     private Notification buildProgressNotification(boolean operationType, int progress, int completedMessageStringId, int minutesToCompletion, int secondsToCompletion) {
 

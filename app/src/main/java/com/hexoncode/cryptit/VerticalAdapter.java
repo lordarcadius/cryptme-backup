@@ -39,7 +39,7 @@ public class VerticalAdapter extends RecyclerView.Adapter<VerticalAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.crypted_list,parent,false);
+        View view = layoutInflater.inflate(R.layout.crypted_list, parent, false);
         return new ViewHolder(view);
     }
 
@@ -117,7 +117,7 @@ public class VerticalAdapter extends RecyclerView.Adapter<VerticalAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView fileTypeImage,fileOption;
+        public ImageView fileTypeImage, fileOption;
         public TextView fileName;
 
         public ViewHolder(View itemView) {
@@ -125,7 +125,7 @@ public class VerticalAdapter extends RecyclerView.Adapter<VerticalAdapter.ViewHo
 
             this.fileTypeImage = itemView.findViewById(R.id.fileTypeImage);
             this.fileOption = itemView.findViewById(R.id.fileOptions);
-            this.fileName =  itemView.findViewById(R.id.fileName);
+            this.fileName = itemView.findViewById(R.id.fileName);
         }
     }
 

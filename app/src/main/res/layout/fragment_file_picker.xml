@@ -38,7 +38,7 @@
         android:stretchMode="columnWidth"
         android:verticalSpacing="4dp"
         android:visibility="gone"
-        android:layout_above="@+id/fileNameInputLinearLayout"/>
+        android:layout_above="@+id/fileNameInputLinearLayout" />
 
     <ListView
         android:id="@+id/fileListView"
@@ -50,7 +50,7 @@
         android:paddingBottom="8dp"
         android:paddingTop="8dp"
         android:visibility="gone"
-        android:layout_above="@+id/fileNameInputLinearLayout"/>
+        android:layout_above="@+id/fileNameInputLinearLayout" />
 
     <LinearLayout
         android:id="@+id/fileNameInputLinearLayout"
@@ -65,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="@string/filename"/>
+            android:hint="@string/filename" />
 
         <Button
             android:id="@+id/fileNameOkButton"

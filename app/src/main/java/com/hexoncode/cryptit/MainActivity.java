@@ -9,6 +9,7 @@ import com.hexoncode.cryptit.FilePicker.FilePicker;
 import com.hexoncode.cryptit.FilePicker.IconFilePicker;
 import com.hexoncode.cryptit.FilePicker.ListFilePicker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (filePickerType == SettingsHelper.FILE_LIST_VIEWER) {
             filePicker = new ListFilePicker();
         }
-        String title = isOutput?getString(R.string.choose_output_file):getString(R.string.choose_input_file);
+        String title = isOutput ? getString(R.string.choose_output_file) : getString(R.string.choose_input_file);
         Bundle args = new Bundle();
         args.putBoolean(FilePicker.IS_OUTPUT_KEY, isOutput);
         GlobalDocumentFileStateHolder.setInitialFilePickerDirectory(initialFolder);
@@ -154,10 +155,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    * Called by MainActivityFragment's onResume.
-    * Replace the fragment with itself so that the UI will update
-    * Bring the FAB back, remove the back arrow from the action bar, change the title
-    * */
+     * Called by MainActivityFragment's onResume.
+     * Replace the fragment with itself so that the UI will update
+     * Bring the FAB back, remove the back arrow from the action bar, change the title
+     * */
     public void returnedToMainFragment() {
         mainActivityFragmentOnTop = true;
         setFabVisible(true);
@@ -166,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    * display the given fragment
+     * display the given fragment
      */
     private void attachFragment(Fragment fragment, boolean addToBackStack, String tag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -211,8 +212,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*Get the attributes for the current theme
-    * attribute argument from R.attr or android.R.attr*/
+     * attribute argument from R.attr or android.R.attr*/
     public int getDarkThemeColor(int attribute) {
-        return getTheme().obtainStyledAttributes(R.style.AppThemeDark, new int[] {attribute}).getColor(0,0);
+        return getTheme().obtainStyledAttributes(R.style.AppThemeDark, new int[]{attribute}).getColor(0, 0);
     }
 }

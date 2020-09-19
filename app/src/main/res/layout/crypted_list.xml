@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_encrypt_file"/>
+        android:src="@drawable/ic_encrypt_file" />
 
     <TextView
         android:layout_weight="1"
@@ -41,6 +41,6 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_ellipsis"/>
+        android:src="@drawable/ic_ellipsis" />
 
 </LinearLayout>

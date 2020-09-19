@@ -16,7 +16,7 @@
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
-    <style name="AppThemeDark" parent="AppTheme" >
+    <style name="AppThemeDark" parent="AppTheme">
         <item name="colorPrimary">@color/darkThemeColorPrimary</item>
         <item name="colorPrimaryDark">@color/darkThemeColorPrimary</item>
         <item name="android:colorControlNormal">@color/colorAccent</item>
@@ -24,10 +24,12 @@
         <item name="android:textColorPrimary">@color/darkThemeTextColor</item>
         <item name="android:textColorHint">@color/darkThemeTextColorHint</item>
     </style>
+
     <style name="DarkAlertDialogTheme" parent="Base.Theme.AppCompat.Dialog.Alert">
         <item name="android:textColorPrimary">@color/darkThemeTextColor</item>
         <item name="android:background">@color/darkThemeBackground</item>
     </style>
+
     <style name="DialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

@@ -17,7 +17,7 @@
             android:text="@string/aescrypt_version"
             android:textColor="#fff"
             android:fontFamily="@font/semi_bold"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/aescryptVersionRadioGroup"
@@ -38,7 +38,7 @@
                 android:textColor="#fff"
                 android:textSize="16sp"
                 android:fontFamily="@font/regular"
-                android:text="@string/version_1_radio_button_text"/>
+                android:text="@string/version_1_radio_button_text" />
 
             <RadioButton
                 android:id="@+id/version2RadioButton"
@@ -199,7 +199,7 @@
             android:fontFamily="@font/extra_light"
             android:textColorHint="#fff"
             android:padding="15dp"
-            android:hint="/ > storage > emulated > 0 > CryptIT"/>
+            android:hint="/ > storage > emulated > 0 > CryptIT" />
 
     </LinearLayout>
 </ScrollView>

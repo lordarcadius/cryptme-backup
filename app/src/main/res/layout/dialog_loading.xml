@@ -9,6 +9,6 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="36dp"
-        android:indeterminateTint="@color/colorAccent"/>
+        android:indeterminateTint="@color/colorAccent" />
 
 </LinearLayout>

@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.core.content.ContextCompat;
 import androidx.documentfile.provider.DocumentFile;
+
 import android.text.InputType;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -149,7 +150,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
 
         updateUI(savedInstanceState);
 
-        if(goldfinger.hasEnrolledFingerprint() && goldfinger.hasFingerprintHardware()){
+        if (goldfinger.hasEnrolledFingerprint() && goldfinger.hasFingerprintHardware()) {
             fpButton.setVisibility(View.VISIBLE);
 
             fpButton.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +171,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
                                     IS_USING_FP = false;
                                 }
                             })
-                    .show();
+                            .show();
                 }
             });
         }
@@ -183,10 +184,10 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
         }
 
         /*
-        * Apply theme preferences to ui
-        * */
+         * Apply theme preferences to ui
+         * */
         if (SettingsHelper.getUseDarkTeme(getContext())) {
-            int textColor = ((MainActivity)getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary);
+            int textColor = ((MainActivity) getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary);
             deleteInputFileCheckbox.setTextColor(textColor);
             showPasswordCheckbox.setTextColor(textColor);
             inputFilePathTextView.setTextColor(textColor);
@@ -221,7 +222,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
         StringBuilder randomStringBuilder = new StringBuilder();
         int randomLength = generator.nextInt(20);
         char tempChar;
-        for (int i = 0; i < randomLength; i++){
+        for (int i = 0; i < randomLength; i++) {
             tempChar = (char) (generator.nextInt(96) + 32);
             randomStringBuilder.append(tempChar);
         }
@@ -237,8 +238,8 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Let MainActivity know that the user has returned to this fragment.
-    * */
+     * Let MainActivity know that the user has returned to this fragment.
+     * */
     @Override
     public void onResume() {
         super.onResume();
@@ -266,9 +267,9 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Apparently there is a bug in Android that causes getActivity()/getContext() to return null sometimes (after a rotate in this case).
-    * This is a workaround.
-    */
+     * Apparently there is a bug in Android that causes getActivity()/getContext() to return null sometimes (after a rotate in this case).
+     * This is a workaround.
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -276,9 +277,9 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Implementation of ProgressDisplayer interface. Called by CryptoThread to show progress.
-    * Has to be done on the gui thread.
-    */
+     * Implementation of ProgressDisplayer interface. Called by CryptoThread to show progress.
+     * Has to be done on the gui thread.
+     */
     @Override
     public void update(final boolean operationType, final int progress, final int completedMessageStringId, final int minutesToCompletion, final int secondsToCompletion) {
         final Context context = getContext();
@@ -371,9 +372,9 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Set the inputFileParentDirectory (isOutput == false) or outputFileParentDirectory (isOutput == true) member variable and change UI of the file select buttons.
-    * Pass null to clear the uri value and reset ui.
-    */
+     * Set the inputFileParentDirectory (isOutput == false) or outputFileParentDirectory (isOutput == true) member variable and change UI of the file select buttons.
+     * Pass null to clear the uri value and reset ui.
+     */
     private void updateFileUI(boolean isOutput) {
         String filePath;
         TextView filePathTextView;
@@ -432,11 +433,11 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
             intent.putExtra(CryptoService.OPERATION_TYPE_EXTRA_KEY, operationMode);
             intent.putExtra(CryptoService.DELETE_INPUT_FILE_KEY, deleteInputFile);
 
-            if(IS_USING_FP){
+            if (IS_USING_FP) {
                 Toast.makeText(getActivity(), "Using fingerprint over password!", Toast.LENGTH_SHORT).show();
                 IS_USING_FP = false;
                 SharedPreferences prefs = getActivity().getSharedPreferences("try", 0);
-                if(prefs.getString("filepass", null) == null){
+                if (prefs.getString("filepass", null) == null) {
                     String newpass = random();
                     passwordEditText.setText(newpass);
                     prefs.edit().putString("filepass", newpass).apply();
@@ -450,7 +451,7 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
                 MainActivityFragment.password = passwordEditText.getText().toString().toCharArray();
             }
 
-            if(!passwordEditText.getText().toString().isEmpty()){
+            if (!passwordEditText.getText().toString().isEmpty()) {
                 context.startService(intent);
             } else {
                 Toast.makeText(getActivity(), "Neither fingerprint nor password given.", Toast.LENGTH_SHORT).show();
@@ -466,15 +467,15 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Display an error to the user via toast.
-    * */
+     * Display an error to the user via toast.
+     * */
     private void showError(String error) {
         Toast.makeText(context, error, Toast.LENGTH_SHORT).show();
     }
 
     /*
-    * Display an error to the user via toast.
-    * */
+     * Display an error to the user via toast.
+     * */
     private void showError(int stringId) {
         showError(context.getString(stringId));
     }
@@ -516,10 +517,10 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*return the default output filename based on the inputFileParentDirectory.
-    *if inputFileParentDirectory is null, returns null.
-    * if in encryption mode, append '.aes' to filename.
-    * if in decryption mode, and input filename ends with '.aes', remove '.aes'
-    * if in decryption mode and input filename does not end with '.aes', return empty string*/
+     *if inputFileParentDirectory is null, returns null.
+     * if in encryption mode, append '.aes' to filename.
+     * if in decryption mode, and input filename ends with '.aes', remove '.aes'
+     * if in decryption mode and input filename does not end with '.aes', return empty string*/
     private String getDefaultOutputFileName() {
         String result = null;
         if (inputFileName != null) {
@@ -538,8 +539,8 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * returns true if the crypto operation can proceed and false otherwise.
-    * displays messages about any issues to the user
+     * returns true if the crypto operation can proceed and false otherwise.
+     * displays messages about any issues to the user
      */
     private boolean isValidElsePrintErrors() {
         boolean valid = true;
@@ -563,9 +564,9 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Get the password as a String and overwrite it in memory.
-    * Overwriting the char[] here may be useless since the EditText returns the password as a String and AESCrypt requires it as a String,
-    * but there isn't a good reason not to.
+     * Get the password as a String and overwrite it in memory.
+     * Overwriting the char[] here may be useless since the EditText returns the password as a String and AESCrypt requires it as a String,
+     * but there isn't a good reason not to.
      */
     public static String getAndClearPassword() {
         if (MainActivityFragment.password == null) {
@@ -578,10 +579,10 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Create a bundle that stores the state of MainActivityFragment and set MainActivityFragment.password
-    * If used in onSaveInstanceState: preserve whatever values Android may put in the outState bundle already by passing it in as systemOutStateBundle
-    * If not called from onSaveInstanceState: pass null for systemOutStateBundle
-    * Sets the static char[] to the password in passwordEditText.
+     * Create a bundle that stores the state of MainActivityFragment and set MainActivityFragment.password
+     * If used in onSaveInstanceState: preserve whatever values Android may put in the outState bundle already by passing it in as systemOutStateBundle
+     * If not called from onSaveInstanceState: pass null for systemOutStateBundle
+     * Sets the static char[] to the password in passwordEditText.
      */
     private Bundle createOutStateBundle(Bundle systemOutStateBundle) {
         Bundle outState;
@@ -612,8 +613,8 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     }
 
     /*
-    * Update the UI to match the member variables and/or savedInstanceState
-    * */
+     * Update the UI to match the member variables and/or savedInstanceState
+     * */
     private void updateUI(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             savedInstanceState = new Bundle();

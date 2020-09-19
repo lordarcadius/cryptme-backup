@@ -30,7 +30,7 @@ public class FilePickerActivity extends AppCompatActivity {
         } else if (filePickerType == SettingsHelper.FILE_LIST_VIEWER) {
             filePicker = new ListFilePicker();
         }
-        String title = isOutput?getString(R.string.choose_output_file):getString(R.string.choose_input_file);
+        String title = isOutput ? getString(R.string.choose_output_file) : getString(R.string.choose_input_file);
         Bundle args = new Bundle();
         args.putBoolean(FilePicker.IS_OUTPUT_KEY, isOutput);
         GlobalDocumentFileStateHolder.setInitialFilePickerDirectory(null);

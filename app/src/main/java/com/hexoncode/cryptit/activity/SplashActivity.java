@@ -103,11 +103,11 @@ public class SplashActivity extends AppCompatActivity {
 
     public void checkLicense() {
 
-            Context AppContext = getApplicationContext();
-            String sPackageName = AppContext.getPackageName();
-            LicenseCheckerCallback mLicenseCheckerCallback = new MyLicenseCheckerCallback2();
-            mChecker = new LicenseChecker(this, new ServerManagedPolicy(AppContext, new AESObfuscator(SALT, sPackageName, Utils.getDeviceId(this))), Publisher.LICENSE_KEY);
-            mChecker.checkAccess(mLicenseCheckerCallback);
+        Context AppContext = getApplicationContext();
+        String sPackageName = AppContext.getPackageName();
+        LicenseCheckerCallback mLicenseCheckerCallback = new MyLicenseCheckerCallback2();
+        mChecker = new LicenseChecker(this, new ServerManagedPolicy(AppContext, new AESObfuscator(SALT, sPackageName, Utils.getDeviceId(this))), Publisher.LICENSE_KEY);
+        mChecker.checkAccess(mLicenseCheckerCallback);
     }
 
     private class MyLicenseCheckerCallback2 implements LicenseCheckerCallback {

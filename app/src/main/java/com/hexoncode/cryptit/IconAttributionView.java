@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Build;
+
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.content.res.AppCompatResources;
+
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
@@ -70,7 +72,7 @@ public class IconAttributionView extends RelativeLayout {
          * apply theme to ui
          */
         if (SettingsHelper.getUseDarkTeme(context)) {
-            int color = context.getTheme().obtainStyledAttributes(R.style.AppThemeDark, new int[] {android.R.attr.textColorPrimary}).getColor(0,0);
+            int color = context.getTheme().obtainStyledAttributes(R.style.AppThemeDark, new int[]{android.R.attr.textColorPrimary}).getColor(0, 0);
             ((TextView) findViewById(R.id.iconMadeByTextView)).setTextColor(color);
             ((TextView) findViewById(R.id.fromTextView)).setTextColor(color);
             ((TextView) findViewById(R.id.licensedByTextView)).setTextColor(color);

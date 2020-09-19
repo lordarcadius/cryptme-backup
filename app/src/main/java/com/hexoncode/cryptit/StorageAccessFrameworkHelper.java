@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+
 import androidx.core.os.EnvironmentCompat;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.appcompat.app.AlertDialog;
@@ -133,7 +134,7 @@ public final class StorageAccessFrameworkHelper {
     }
 
     /* returns external storage paths (directory of external memory card) as array of Strings
-    * thank you stack overflow*/
+     * thank you stack overflow*/
     private static String[] getExternalStorageDirectories(Context context) {
 
         List<String> results = new ArrayList<>();
@@ -245,14 +246,16 @@ public final class StorageAccessFrameworkHelper {
 
         return pathNameBuilder.toString();
     }
-    public static InputStream getFileInputStream(Context context, String inputFileName) throws FileNotFoundException{
+
+    public static InputStream getFileInputStream(Context context, String inputFileName) throws FileNotFoundException {
         DocumentFile inputFile = GlobalDocumentFileStateHolder.getInputFileParentDirectory().findFile(inputFileName);
         if (inputFile == null) {
             throw new FileNotFoundException();
         }
         return context.getContentResolver().openInputStream(inputFile.getUri());
     }
-    public static OutputStream getFileOutputStream(Context context, String outputFilename) throws FileNotFoundException{
+
+    public static OutputStream getFileOutputStream(Context context, String outputFilename) throws FileNotFoundException {
         DocumentFile outputFile = GlobalDocumentFileStateHolder.getOutputFileParentDirectory().createFile("", outputFilename);
         if (outputFile == null) {
             throw new FileNotFoundException();
@@ -260,7 +263,7 @@ public final class StorageAccessFrameworkHelper {
         return context.getContentResolver().openOutputStream(outputFile.getUri());
     }
 
-    public static File getFileOfOutputStream(Context context, String outputFilename) throws FileNotFoundException{
+    public static File getFileOfOutputStream(Context context, String outputFilename) throws FileNotFoundException {
         DocumentFile outputFile = GlobalDocumentFileStateHolder.getOutputFileParentDirectory().createFile("", outputFilename);
         if (outputFile == null) {
             throw new FileNotFoundException();

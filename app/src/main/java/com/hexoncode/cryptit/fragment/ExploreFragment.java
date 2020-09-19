@@ -64,7 +64,7 @@ public class ExploreFragment extends Fragment implements VerticalAdapter.Explore
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root =  inflater.inflate(R.layout.fragment_explore, container, false);
+        View root = inflater.inflate(R.layout.fragment_explore, container, false);
         searchBar = root.findViewById(R.id.searchBar);
         recyclerView = root.findViewById(R.id.recyclerView);
         nullLayout = root.findViewById(R.id.nullLayout);
@@ -270,6 +270,7 @@ public class ExploreFragment extends Fragment implements VerticalAdapter.Explore
 
     interface GetFilesListener {
         void onLoading();
+
         void onLoad(File[] encryptedFiles, File[] decryptedFiles);
     }
 

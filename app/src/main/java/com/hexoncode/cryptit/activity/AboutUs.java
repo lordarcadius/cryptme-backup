@@ -17,7 +17,7 @@ import com.hexoncode.cryptit.R;
 public class AboutUs extends AppCompatActivity {
 
     public TextView madeInIndia, cryptItText, aboutDevText;
-    public ImageView web, linkedin, facebook,  instagram;
+    public ImageView web, linkedin, facebook, instagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

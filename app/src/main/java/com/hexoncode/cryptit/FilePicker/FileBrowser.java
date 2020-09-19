@@ -2,6 +2,7 @@ package com.hexoncode.cryptit.FilePicker;
 
 import android.content.Context;
 import android.os.Environment;
+
 import androidx.documentfile.provider.DocumentFile;
 
 import com.hexoncode.cryptit.StorageAccessFrameworkHelper;
@@ -25,14 +26,17 @@ public class FileBrowser {
         currentDirectory = internalStorageHome;
         monitorCurrentPathForChanges();
     }
+
     public void setFilePicker(FilePicker filePicker) {
         this.filePicker = filePicker;
         updateFileViewer();
     }
+
     public void updateFileViewer() {
         ArrayList<DocumentFile> files = new ArrayList<>(Arrays.asList(currentDirectory.listFiles()));
         filePicker.setFileList(files);
     }
+
     private void monitorCurrentPathForChanges() {
         /*
 
@@ -64,7 +68,7 @@ public class FileBrowser {
 
     //change the displayed file path to newDirectory if it is a directory. If the new path is ".." then change the current path to the parent of the current directory.
     public void setCurrentDirectory(DocumentFile newDirectory) {
-        if(!newDirectory.isDirectory()) {
+        if (!newDirectory.isDirectory()) {
             return;
         }
         currentDirectory = newDirectory;
@@ -92,5 +96,5 @@ public class FileBrowser {
     public DocumentFile getCurrentDirectory() {
         return currentDirectory;
     }
-    
+
 }

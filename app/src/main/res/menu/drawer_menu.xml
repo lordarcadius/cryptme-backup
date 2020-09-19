@@ -14,32 +14,32 @@
         <item
             android:id="@+id/about"
             android:title="About"
-            android:icon="@drawable/ic_info"/>
+            android:icon="@drawable/ic_info" />
 
         <item
             android:id="@+id/contact"
             android:title="Contact us"
-            android:icon="@drawable/ic_mail"/>
+            android:icon="@drawable/ic_mail" />
 
         <item
             android:id="@+id/faq"
             android:title="FAQ"
-            android:icon="@drawable/ic_faq"/>
+            android:icon="@drawable/ic_faq" />
 
         <item
             android:id="@+id/donate"
             android:title="Donate"
-            android:icon="@drawable/ic_money"/>
+            android:icon="@drawable/ic_money" />
 
         <item
             android:id="@+id/rate"
             android:title="Rate"
-            android:icon="@drawable/ic_star"/>
+            android:icon="@drawable/ic_star" />
 
         <item
             android:id="@+id/invite"
             android:title="Invite"
-            android:icon="@drawable/ic_share"/>
+            android:icon="@drawable/ic_share" />
 
     </group>
 

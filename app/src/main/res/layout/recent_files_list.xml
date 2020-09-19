@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_encrypt_file"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/fileName"
@@ -25,6 +25,6 @@
         android:textAlignment="center"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:text="file.aes"/>
+        android:text="file.aes" />
 
 </LinearLayout>

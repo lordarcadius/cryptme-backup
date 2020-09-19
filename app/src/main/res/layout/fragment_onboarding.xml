@@ -13,7 +13,7 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        tools:src="@drawable/welcome"/>
+        tools:src="@drawable/welcome" />
 
     <TextView
         android:id="@+id/title"
@@ -26,7 +26,7 @@
         android:textColor="#fff"
         android:textSize="22sp"
         android:fontFamily="@font/bold"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp" />
 
     <TextView
         android:id="@+id/message"
@@ -39,6 +39,6 @@
         tools:text="This is a long descripting text that will span multiple lines"
         android:textColor="#fff"
         android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>

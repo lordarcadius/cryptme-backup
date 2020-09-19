@@ -3,10 +3,12 @@ package com.hexoncode.cryptit.FilePicker;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.appcompat.app.AlertDialog;
+
 import android.text.method.ScrollingMovementMethod;
 import android.util.Pair;
 import android.view.Menu;
@@ -132,8 +134,8 @@ public abstract class FilePicker extends Fragment {
     /////////////////////////
 
     /*create a FileBrowser and assign it to the member variable
-    * get the savedInstanceState and put it in a member variable
-    * */
+     * get the savedInstanceState and put it in a member variable
+     * */
 
     //create the options menu
     @Override
@@ -259,7 +261,7 @@ public abstract class FilePicker extends Fragment {
 
         /*Change text to match theme*/
         if (SettingsHelper.getUseDarkTeme(getContext())) {
-            currentPathTextView.setTextColor(((MainActivity)getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary));
+            currentPathTextView.setTextColor(((MainActivity) getActivity()).getDarkThemeColor(android.R.attr.textColorPrimary));
         }
     }
     ///////////////////////////////////
@@ -278,7 +280,7 @@ public abstract class FilePicker extends Fragment {
 
     private void updateFileArrayAdapterFileList(List<DocumentFile> documentFiles) {
         fileListAdapter.clear();
-        for(DocumentFile documentFile : documentFiles) {
+        for (DocumentFile documentFile : documentFiles) {
             fileListAdapter.add(new Pair<>(documentFile.getName(), documentFile.isDirectory()));
         }
         if (fileBrowser.getCurrentDirectory().getParentFile() != null) {
@@ -295,7 +297,7 @@ public abstract class FilePicker extends Fragment {
         String error = "";
         if (filename.isEmpty()) {
             error = getString(R.string.filename_cannot_be_empty);
-        } else{
+        } else {
             DocumentFile existingFile = newFileParentDirectory.findFile(filename);
             if (existingFile != null && existingFile.isDirectory()) {
                 error = getString(R.string.file_is_a_directory);
