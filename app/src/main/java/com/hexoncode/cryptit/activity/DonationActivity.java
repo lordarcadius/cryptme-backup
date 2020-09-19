@@ -16,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -41,6 +43,11 @@ public class DonationActivity extends AppCompatActivity implements BillingProces
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(getColor(R.color.colorPrimary));
+        window.setNavigationBarColor(getColor(R.color.colorPrimary));
 
         bp = BillingProcessor.newBillingProcessor(this, Publisher.LICENSE_KEY, this);
         bp.initialize();

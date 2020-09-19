@@ -25,8 +25,8 @@ public class AboutUs extends AppCompatActivity {
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(getColor(R.color.colorPrimaryDark));
-        window.setNavigationBarColor(getColor(R.color.colorPrimaryDark));
+        window.setStatusBarColor(getColor(R.color.colorPrimary));
+        window.setNavigationBarColor(getColor(R.color.colorPrimary));
 
         setContentView(R.layout.activity_about_us);
         madeInIndia = findViewById(R.id.madeInIndia);
