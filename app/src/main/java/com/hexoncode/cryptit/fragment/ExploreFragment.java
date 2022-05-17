@@ -234,11 +234,15 @@ public class ExploreFragment extends Fragment implements VerticalAdapter.Explore
             if (encryptedFiles != null) {
                 ArrayList<File> list = new ArrayList<>(Arrays.asList(encryptedFiles));
                 Iterator<File> iterator = list.iterator();
-                while (iterator.hasNext()) {
-                    File f = iterator.next();
-                    if (!f.getName().endsWith(".aes") || !f.isFile()) {
-                        list.remove(f);
+                try {
+                    while (iterator.hasNext()) {
+                        File f = iterator.next();
+                        if (!f.getName().endsWith(".aes") || !f.isFile()) {
+                            list.remove(f);
+                        }
                     }
+                } catch (Exception e){
+                    e.printStackTrace();
                 }
 
                 encryptedFiles = list.toArray(new File[0]);
