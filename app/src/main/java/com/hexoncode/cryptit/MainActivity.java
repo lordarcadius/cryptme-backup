@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fab;
     private boolean mainActivityFragmentOnTop = true;
 
-    private static final String MAINACITIVITYFRAGMENT_ON_TOP_KEY = "com.divyanshu.cryptit.MainActivity.MAINACTIVITYFRAGMENT_ON_TOP_KEY";
-    private static final String MAINACTIVITYFRAGMENT_TAG = "com.divyanshu.cryptit.MainActivity.MAINACTIVITYFRAGMENT_TAG";
-    private static final String FILEPICKERFRAGMENT_TAG = "com.divyanshu.cryptit.MainActivity.FILEPICKERFRAGMENT_TAG";
-    private static final String TITLE_KEY = "com.divyanshu.cryptit.MainActivity.TITLE_KEY";
+    private static final String MAINACITIVITYFRAGMENT_ON_TOP_KEY = "com.team4.cryptme.MainActivity.MAINACTIVITYFRAGMENT_ON_TOP_KEY";
+    private static final String MAINACTIVITYFRAGMENT_TAG = "com.team4.cryptme.MainActivity.MAINACTIVITYFRAGMENT_TAG";
+    private static final String FILEPICKERFRAGMENT_TAG = "com.team4.cryptme.MainActivity.FILEPICKERFRAGMENT_TAG";
+    private static final String TITLE_KEY = "com.team4.cryptme.MainActivity.TITLE_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

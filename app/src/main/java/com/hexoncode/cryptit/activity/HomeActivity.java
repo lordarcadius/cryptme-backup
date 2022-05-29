@@ -78,11 +78,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DecryptFragment decryptFragment;
     private ExploreFragment exploreFragment;
 
-    private static final String PROGRESS_DISPLAYER_ID = "com.divyanshu.cryptit.MainActivityFragment.PROGRESS_DISPLAYER_ID";
-    private static final String MAINACITIVITYFRAGMENT_ON_TOP_KEY = "com.divyanshu.cryptit.MainActivity.MAINACTIVITYFRAGMENT_ON_TOP_KEY";
-    private static final String MAINACTIVITYFRAGMENT_TAG = "com.divyanshu.cryptit.MainActivity.MAINACTIVITYFRAGMENT_TAG";
-    private static final String FILEPICKERFRAGMENT_TAG = "com.divyanshu.cryptit.MainActivity.FILEPICKERFRAGMENT_TAG";
-    private static final String TITLE_KEY = "com.divyanshu.cryptit.MainActivity.TITLE_KEY";
+    private static final String PROGRESS_DISPLAYER_ID = "com.team4.cryptme.MainActivityFragment.PROGRESS_DISPLAYER_ID";
+    private static final String MAINACITIVITYFRAGMENT_ON_TOP_KEY = "com.team4.cryptme.MainActivity.MAINACTIVITYFRAGMENT_ON_TOP_KEY";
+    private static final String MAINACTIVITYFRAGMENT_TAG = "com.team4.cryptme.MainActivity.MAINACTIVITYFRAGMENT_TAG";
+    private static final String FILEPICKERFRAGMENT_TAG = "com.team4.cryptme.MainActivity.FILEPICKERFRAGMENT_TAG";
+    private static final String TITLE_KEY = "com.team4.cryptme.MainActivity.TITLE_KEY";
     private static final String[] PERMISSIONS = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
     private static final int RC_PERMISSIONS = 8008;
     private static final String SUPPORT_EMAIL = "android-support@hexoncode.com";

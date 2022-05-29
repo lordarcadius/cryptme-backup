@@ -29,18 +29,18 @@ public class CryptoService extends Service implements CryptoThread.ProgressDispl
     public static final int START_FOREGROUND_ID = 1025;
 
     //Keys for the intent extras
-    public static final String INPUT_FILE_NAME_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.INPUT_URI_KEY";
-    public static final String OUTPUT_FILE_NAME_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.OUTPUT_FILE_NAME_EXTRA_KEY";
-    public static final String INPUT_FILENAME_KEY = "com.divyanshu.cryptit.CryptoService.INPUT_FILENAME_KEY";
-    public static final String OUTPUT_FILENAME_KEY = "com.divyanshu.cryptit.CryptoService.OUTPUT_FILENAME_KEY";
-    public static final String VERSION_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.VERSION_EXTRA_KEY";
-    public static final String OPERATION_TYPE_EXTRA_KEY = "com.divyanshu.cryptit.CryptoService.OPERATION_TYPE_EXTRA_KEY";
-    public static final String DELETE_INPUT_FILE_KEY = "com.divyanshu.cryptit.CryptoService.DELETE_INPUT_FILE_KEY";
+    public static final String INPUT_FILE_NAME_EXTRA_KEY = "com.team4.cryptme.CryptoService.INPUT_URI_KEY";
+    public static final String OUTPUT_FILE_NAME_EXTRA_KEY = "com.team4.cryptme.CryptoService.OUTPUT_FILE_NAME_EXTRA_KEY";
+    public static final String INPUT_FILENAME_KEY = "com.team4.cryptme.CryptoService.INPUT_FILENAME_KEY";
+    public static final String OUTPUT_FILENAME_KEY = "com.team4.cryptme.CryptoService.OUTPUT_FILENAME_KEY";
+    public static final String VERSION_EXTRA_KEY = "com.team4.cryptme.CryptoService.VERSION_EXTRA_KEY";
+    public static final String OPERATION_TYPE_EXTRA_KEY = "com.team4.cryptme.CryptoService.OPERATION_TYPE_EXTRA_KEY";
+    public static final String DELETE_INPUT_FILE_KEY = "com.team4.cryptme.CryptoService.DELETE_INPUT_FILE_KEY";
     public static final String PASSWORD = "com.hexoncode.cryptit.CryptoService.PASSWORD_EXTRA_KEY";
 
-    public static final String NOTIFICATION_CHANNEL_ID = "com.divyanshu.cryptit.CryptoService.OPERATION_TYPE_EXTRA_KEY";
+    public static final String NOTIFICATION_CHANNEL_ID = "com.team4.cryptme.CryptoService.OPERATION_TYPE_EXTRA_KEY";
 
-    private static final String PROGRESS_DISPLAYER_ID = "com.divyanshu.cryptit.CryptoService.PROGRESS_DISPLAYER_ID";
+    private static final String PROGRESS_DISPLAYER_ID = "com.team4.cryptme.CryptoService.PROGRESS_DISPLAYER_ID";
 
     @Override
     public void onCreate() {

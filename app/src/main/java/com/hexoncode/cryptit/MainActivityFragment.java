@@ -49,8 +49,8 @@ import me.aflak.libraries.dialog.FingerprintDialog;
  */
 public class MainActivityFragment extends Fragment implements CryptoThread.ProgressDisplayer {
 
-    public static final String CALLBACK_SELECT_OUTPUT_FILE = "com.divyanshu.cryptit.MainActivityFragment.CALLBACK_SELECT_OUTPUT_FILE";
-    public static final String CALLBACK_SELECT_INPUT_FILE = "com.divyanshu.cryptit.MainActivityFragment.CALLBACK_SELECT_INPUT_FILE";
+    public static final String CALLBACK_SELECT_OUTPUT_FILE = "com.team4.cryptme.MainActivityFragment.CALLBACK_SELECT_OUTPUT_FILE";
+    public static final String CALLBACK_SELECT_INPUT_FILE = "com.team4.cryptme.MainActivityFragment.CALLBACK_SELECT_INPUT_FILE";
 
     /*
         Using static variables to store the password rather than savedInstanceState and Intent extras because of paranoia.
@@ -62,13 +62,13 @@ public class MainActivityFragment extends Fragment implements CryptoThread.Progr
     private static final int SELECT_OUTPUT_DIRECTORY_REQUEST_CODE = 8878;
     private static final int WRITE_FILE_PERMISSION_REQUEST_CODE = 440;
 
-    private static final String PROGRESS_DISPLAYER_ID = "com.divyanshu.cryptit.MainActivityFragment.PROGRESS_DISPLAYER_ID";
+    private static final String PROGRESS_DISPLAYER_ID = "com.team4.cryptme.MainActivityFragment.PROGRESS_DISPLAYER_ID";
 
-    private static final String SAVED_INSTANCE_STATE_SHOW_PASSWORD = "com.divyanshu.cryptit.MainActivityFragment.SAVED_INSTANCE_STATE_SHOW_PASSWORD";
-    private static final String SAVED_INSTANCE_STATE_OPERATION_MODE = "com.divyanshu.cryptit.MainActivityFragment.SAVED_INSTANCE_STATE_OPERATION_MODE";
-    private static final String SAVED_INSTANCE_STATE_INPUT_FILENAME = "com.divyanshu.cryptit.MainActivityFragment.SAVED_INSTANCE_STATE_INPUT_FILENAME";
-    private static final String SAVED_INSTANCE_STATE_OUTPUT_FILENAME = "com.divyanshu.cryptit.MainActivityFragment.SAVED_INSTANCE_STATE_OUTPUT_FILENAME";
-    private static final String SAVED_INSTANCE_STATE_DELETE_INPUT_FILE = "com.divyanshu.cryptit.MainActivityFragment.SAVED_INSTANCE_STATE_DELETE_INPUT_FILE";
+    private static final String SAVED_INSTANCE_STATE_SHOW_PASSWORD = "com.team4.cryptme.MainActivityFragment.SAVED_INSTANCE_STATE_SHOW_PASSWORD";
+    private static final String SAVED_INSTANCE_STATE_OPERATION_MODE = "com.team4.cryptme.MainActivityFragment.SAVED_INSTANCE_STATE_OPERATION_MODE";
+    private static final String SAVED_INSTANCE_STATE_INPUT_FILENAME = "com.team4.cryptme.MainActivityFragment.SAVED_INSTANCE_STATE_INPUT_FILENAME";
+    private static final String SAVED_INSTANCE_STATE_OUTPUT_FILENAME = "com.team4.cryptme.MainActivityFragment.SAVED_INSTANCE_STATE_OUTPUT_FILENAME";
+    private static final String SAVED_INSTANCE_STATE_DELETE_INPUT_FILE = "com.team4.cryptme.MainActivityFragment.SAVED_INSTANCE_STATE_DELETE_INPUT_FILE";
 
     //stores the type of operation to be done
     private boolean operationMode = CryptoThread.OPERATION_TYPE_ENCRYPTION;

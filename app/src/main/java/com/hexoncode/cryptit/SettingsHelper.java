@@ -17,11 +17,11 @@ public final class SettingsHelper {
     public static final boolean USE_DARK_THEME_DEFAULT = false;
     public static final int AESCRYPT_DEFAULT_VERSION = CryptoThread.VERSION_2;
 
-    private static final String SHARED_PREFERENCES_FILE = "com.divyanshu.cryptit.SettingsHelper.SHARED_PREFERENCES_FILE";
-    private static final String AESCRYPT_VERSION_PREF = "com.divyanshu.cryptit.SettingsHelper.AESCRYPT_VERSION_PREF";
-    private static final String FILE_VIEWER_TYPE = "com.divyanshu.cryptit.FileBrowsing.ui.SettingsHelper.FILE_VIEWER_TYPE";
-    private static final String SDCARD_ROOT = "com.divyanshu.cryptit.FileBrowsing.ui.SettingsHelper.SDCARD_ROOT";
-    private static final String USE_DARK_THEME = "com.divyanshu.cryptit.SettingsHelper.USE_DARK_THEME";
+    private static final String SHARED_PREFERENCES_FILE = "com.team4.cryptme.SettingsHelper.SHARED_PREFERENCES_FILE";
+    private static final String AESCRYPT_VERSION_PREF = "com.team4.cryptme.SettingsHelper.AESCRYPT_VERSION_PREF";
+    private static final String FILE_VIEWER_TYPE = "com.team4.cryptme.FileBrowsing.ui.SettingsHelper.FILE_VIEWER_TYPE";
+    private static final String SDCARD_ROOT = "com.team4.cryptme.FileBrowsing.ui.SettingsHelper.SDCARD_ROOT";
+    private static final String USE_DARK_THEME = "com.team4.cryptme.SettingsHelper.USE_DARK_THEME";
 
     private static SharedPreferences sharedPreferences;
 

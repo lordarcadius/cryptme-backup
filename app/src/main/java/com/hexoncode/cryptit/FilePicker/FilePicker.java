@@ -49,8 +49,8 @@ public abstract class FilePicker extends Fragment {
     /**
      * Keys for arguments bundle
      */
-    public static final String IS_OUTPUT_KEY = "com.divyanshu.cryptit.FilePicker.FilePicker.IS_OUTPUT_KEY";
-    public static final String DEFAULT_OUTPUT_FILENAME_KEY = "com.divyanshu.cryptit.FilePicker.FilePicker.DEFAULT_OUTPUT_FILENAME_KEY";
+    public static final String IS_OUTPUT_KEY = "com.team4.cryptme.FilePicker.FilePicker.IS_OUTPUT_KEY";
+    public static final String DEFAULT_OUTPUT_FILENAME_KEY = "com.team4.cryptme.FilePicker.FilePicker.DEFAULT_OUTPUT_FILENAME_KEY";
 
     ////////////////////////////////
     //MEMBER VARIABLES
