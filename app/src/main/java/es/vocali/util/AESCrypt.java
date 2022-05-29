@@ -15,7 +15,7 @@
  */
 package es.vocali.util;
 
-import com.hexoncode.cryptit.CryptoThread;
+import com.team4.cryptme.CryptoThread;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

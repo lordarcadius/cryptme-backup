@@ -38,7 +38,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <com.hexoncode.cryptit.FileSelectButton
+            <com.team4.cryptme.FileSelectButton
                 android:id="@+id/selectInputFileButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_marginEnd="16dp"
             android:orientation="horizontal">
 
-            <com.hexoncode.cryptit.FileSelectButton
+            <com.team4.cryptme.FileSelectButton
                 android:id="@+id/selectOutputFileButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

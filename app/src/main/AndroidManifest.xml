@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hexoncode.cryptit">
+    package="com.team4.cryptme">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,29 +18,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.FaqActivity"></activity>
+        <activity android:name="com.team4.cryptme.activity.FaqActivity"></activity>
         <activity
-            android:name=".activity.DonationActivity"
+            android:name="com.team4.cryptme.activity.DonationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OnboardingActivity"
+            android:name="com.team4.cryptme.activity.OnboardingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AboutUs"
+            android:name="com.team4.cryptme.activity.AboutUs"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SettingsActivity"
+            android:name="com.team4.cryptme.activity.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FilePickerActivity"
+            android:name="com.team4.cryptme.activity.FilePickerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.HomeActivity"
+            android:name="com.team4.cryptme.activity.HomeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.team4.cryptme.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Splash">
             <intent-filter>
@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.team4.cryptme.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
@@ -68,7 +68,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name=".CryptoService" />
+        <service android:name="com.team4.cryptme.CryptoService" />
 
         <uses-library
             android:name="org.apache.http.legacy"
