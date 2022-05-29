@@ -117,7 +117,7 @@ public class DonationActivity extends AppCompatActivity implements BillingProces
 
     private void invite() {
 
-        String message = "I am using Crypt-It to secure my data from malicious apps with military-grade encryption algorithms. Download it today from the Google Play Store.\n\nhttp://play.google.com/store/apps/details?id=" + getPackageName();
+        String message = "I am using Crypt-Me to secure my data from malicious apps with military-grade encryption algorithms. Download it today from the Google Play Store.\n\nhttp://play.google.com/store/apps/details?id=" + getPackageName();
 
         ShareCompat.IntentBuilder
                 .from(this)

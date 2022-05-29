@@ -64,7 +64,7 @@ public class DecryptFragment extends Fragment {
 
         root.findViewById(R.id.uploadAFile).setOnClickListener(v -> {
 
-            File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Encrypted");
+            File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Encrypted");
             if (!encryptedFilesDirectory.exists()) encryptedFilesDirectory.mkdirs();
 
             DocumentFile initialFolder = DocumentFile.fromFile(encryptedFilesDirectory);

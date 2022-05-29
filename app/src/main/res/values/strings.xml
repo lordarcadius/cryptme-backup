@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Crypt-It</string>
+    <string name="app_name">Crypt-Me</string>
     <string name="cancel">Cancel</string>
     <string name="encrypting">Encrypting</string>
     <string name="confirm_password">Confirm Password</string>
@@ -109,13 +109,13 @@
     <string name="recent_files">Recent Files</string>
     <string name="decrypted_files">Decrypted Files</string>
     <string name="search_for_files">Search for files..</string>
-    <string name="about_crypt_text">Crypt-It is an app that helps you secure your files with military-grade encryption algorithms. The encrypted files cannot be decrypted with any other tool or without your password or fingerprint.
+    <string name="about_crypt_text">Crypt-Me is an app that helps you secure your files with military-grade encryption algorithms. The encrypted files cannot be decrypted with any other tool or without your password or fingerprint.
     \n\nThis app is developed by Hexoncode. We are a team of highly skilled developers and designers who develop smooth and beautiful apps, websites, designs, graphics and many more cool things.</string>
     <string name="donate_text">We are a team of self-established, highly motivated developers and designers who put love in work. Your donations will help us make more awesome things like this app.</string>
     <!--    onboarding-->
     <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal your data.</string>
     <string name="onboarding_encrypt">With a 256-bit military-grade encryption algorithm, 3 way key salting and multi-level remuneration, we ensure the files we encrypt can never be touched or fiddled with, without your consent.</string>
-    <string name="onboarding_decrypt">Files encrypted by Crypt-It can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-It, That\'s it!</string>
+    <string name="onboarding_decrypt">Files encrypted by Crypt-Me can only be decrypted by its own unique algorithm accompanied by your provided password or fingerprint. Just Crypt-Me, That\'s it!</string>
     <string name="onboarding_trust">We respect your privacy and that is why your files don\'t leave your device. Encryption and decryption are done locally and without the internet. To ensure only genuine and non-tampered copies of the app are functional, we perform a purchase and integrity check on the first launch which requires internet access.</string>
     <string name="question_one">Q. Why does the app need internet permission?</string>
     <string name="question_two">Q. Do I need to have internet to use this app?</string>

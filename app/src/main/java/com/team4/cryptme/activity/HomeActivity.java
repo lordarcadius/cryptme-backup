@@ -342,8 +342,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //Can't use getContext() or getActivity(). See comment on this.onAttach(Context)
         Intent intent = new Intent(HomeActivity.this, CryptoService.class);
 
-        File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Encrypted");
-        File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Decrypted");
+        File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Encrypted");
+        File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Decrypted");
 
         if (!encryptedFilesDirectory.exists()) encryptedFilesDirectory.mkdirs();
         if (!decryptedFilesDirectory.exists()) decryptedFilesDirectory.mkdirs();
@@ -498,7 +498,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private void invite() {
 
-        String message = "I am using Crypt-It to secure my data from malicious apps with military-grade encryption algorithms. Download it today from the Google Play Store.\n\nhttp://play.google.com/store/apps/details?id=" + getPackageName();
+        String message = "I am using Crypt-Me to secure my data from malicious apps with military-grade encryption algorithms. Download it today from the Google Play Store.\n\nhttp://play.google.com/store/apps/details?id=" + getPackageName();
 
         ShareCompat.IntentBuilder
                 .from(this)

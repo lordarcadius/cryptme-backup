@@ -62,8 +62,8 @@ public class ExploreFragment extends Fragment implements VerticalAdapter.Explore
         progressBar = root.findViewById(R.id.progressBar);
         searchRecyclerView = root.findViewById(R.id.searchRecyclerView);
 
-        File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Encrypted");
-        File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Decrypted");
+        File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Encrypted");
+        File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Decrypted");
 
         if (!encryptedFilesDirectory.exists()) encryptedFilesDirectory.mkdirs();
         if (!decryptedFilesDirectory.exists()) decryptedFilesDirectory.mkdirs();
@@ -215,8 +215,8 @@ public class ExploreFragment extends Fragment implements VerticalAdapter.Explore
         @Override
         protected List<File[]> doInBackground(Void... voids) {
 
-            File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Encrypted");
-            File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-It" + File.separator + "Decrypted");
+            File encryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Encrypted");
+            File decryptedFilesDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "Crypt-Me" + File.separator + "Decrypted");
 
             File[] encryptedFiles = encryptedFilesDirectory.listFiles();
             File[] decryptedFiles = decryptedFilesDirectory.listFiles();
