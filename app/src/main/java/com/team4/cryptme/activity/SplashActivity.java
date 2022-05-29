@@ -54,7 +54,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
         madeInIndia = findViewById(R.id.madeInIndia);
-        madeInIndia.setText("Made with ❤ in India by Hexoncode");
+        madeInIndia.setText("Made with ❤ in India by Team 4");
 
 //        init();
         launchHome();

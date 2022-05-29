@@ -110,7 +110,7 @@
     <string name="decrypted_files">Decrypted Files</string>
     <string name="search_for_files">Search for files..</string>
     <string name="about_crypt_text">Crypt-Me is an app that helps you secure your files with military-grade encryption algorithms. The encrypted files cannot be decrypted with any other tool or without your password or fingerprint.
-    \n\nThis app is developed by Hexoncode. We are a team of highly skilled developers and designers who develop smooth and beautiful apps, websites, designs, graphics and many more cool things.</string>
+    \n\nThis app is developed by Team 4 of MSIT, IT Branch for Final year major project.</string>
     <string name="donate_text">We are a team of self-established, highly motivated developers and designers who put love in work. Your donations will help us make more awesome things like this app.</string>
     <!--    onboarding-->
     <string name="onboarding_welcome">Your data is your private property, so are your files. Without encryption, any malicious application can access your files and steal your data.</string>
@@ -127,7 +127,7 @@ To ensure only a genuine and non-tampered copy of the application is installed i
 This requires internet access after which, the entire application functions offline.</string>
     <string name="answer_two">A. No, absolutely not. Internet is required only during the first launch to validate the application\'s integrity as already mentioned above. The app completely functions offline.</string>
     <string name="answer_three">A. No! We do not send any of your files to the cloud. Your files stay on your phone and nothing goes out of it. The app is completely safe to use without any hesitation.</string>
-    <string name="answer_four">A. Yes, the app is completely developed in India by an Indian startup \'Hexoncode\'. Read more about us in the About section of the app.</string>
+    <string name="answer_four">A. Yes, the app is completely developed in India by \'Team 4 of MSIT, IT Branch.\'. Read more about us in the About section of the app.</string>
     <string name="answer_five">A. The application can be used to encrypt sensitive content while sharing them over insecure networks, uploading to public clouds, or even to prevent someone from accessing the information.
 The application supports all file formats and can be used in all situations to add a safety layer to your files.</string>
 

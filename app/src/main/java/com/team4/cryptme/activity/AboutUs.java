@@ -35,7 +35,7 @@ public class AboutUs extends AppCompatActivity {
         facebook = findViewById(R.id.facebook);
         instagram = findViewById(R.id.instagram);
 
-        madeInIndia.setText("Made with ❤ in India by Hexoncode");
+        madeInIndia.setText("Made with ❤ in India by Team 4");
         cryptItText.setText(R.string.app_name);
 
         web.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.hexoncode.com"))));
